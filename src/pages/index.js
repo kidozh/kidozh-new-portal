@@ -6,115 +6,55 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
-
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+    <section className="bg-gray-50 dark:bg-slate-600 bg-fine-wave-bg-light dark:bg-fine-wave-bg-dark">
+      <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
+        <h1 class="text-6xl font-bold text-gray-800 dark:text-white font-montserrat">Hi
+          <span className="dark:text-orange-500 text-orange-600">.</span></h1>
+        <p class="text-2xl text-gray-600 dark:text-gray-300 mt-6 font-montserrat">
+          I am Jiduo Zhang and a Ph.D. student majoring in Mechanical Engineering at
+          The University of Manchester<span className="dark:text-orange-500 text-orange-600">.</span></p>
+
+        <div className="mt-8">
+          <a href="https://github.com/kidozh"
+            type="button" class="text-white font-montserrat bg-gray-900 hover:bg-gray-800 
+          focus:outline-none focus:ring-4  focus:ring-blue-300 font-medium 
+          rounded-full text-lg px-5 py-2.5 text-center mr-2 mb-2 dark:bg-gray-800
+           dark:hover:bg-gray-900 dark:focus:ring-gray-900">Github</a>
+
+          <a href="https://www.researchgate.net/profile/Jiduo-Zhang"
+            type="button" class="text-white font-montserrat bg-green-700 hover:bg-green-800 
+          focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium 
+          rounded-full text-lg px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-500
+           dark:hover:bg-green-600 dark:focus:ring-green-700">ResearchGate</a>
+
+          <a href="https://scholar.google.com/citations?user=nudc3xUAAAAJ&hl=en"
+            type="button" class="text-white font-montserrat bg-blue-500 hover:bg-blue-600 
+          focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium 
+          rounded-full text-lg px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600
+           dark:hover:bg-blue-700 dark:focus:ring-blue-800">Google Scholar</a>
+
+        </div>
+      </div>
+    </section>
+    <section className="bg-gray-100 dark:bg-gray-900">
+      <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
+        <h1 className="text-4xl font-bold text-gray-800 dark:text-white">📢 Latest <span className="bg-orange-300 dark:bg-orange-600 text-underline">update</span></h1>
+        <p className="text-normal font-bold text-gray-500 dark:text-gray-200 mt-4 font-normal">
+          <span className="text-gray-700 dark:text-gray-300 mr-3 font-extrabold">2021-10-01</span>
+          Our paper entitled, "In-process tool wear forecast based on a deep learning method",
+           was accepted by Robotic and Computer Integrated Manufacturing.
+           </p>
+      </div>
+    </section>
+    <section className="bg-blue-100 dark:bg-blue-800">
+      <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
+        <h1 className="text-4xl font-bold text-blue-800 dark:text-blue-400">Looking for something else?</h1>
+        <p className="text-normal font-bold text-gray-500 dark:text-gray-200 mt-4">You may find all my projects, CV on the portal page if you wish.</p>
+      </div>
+    </section>
+
   </Layout>
 )
 
