@@ -9,7 +9,9 @@ const UpdatePostPage = ({data}) => {
 
     return (
         <Layout>
-            <div className="bg-gray-50 dark:bg-gray-800 p-4">
+
+            <div className="bg-indigo-200 dark:bg-indigo-400 p-8">
+                <div className="bg-gray-50 dark:bg-slate-600 rounded-xl">
                 <section className="w-full mx-auto max-w-screen-xl px-6 py-32">
                     <h4 className="text-md font-bold font-montserrat text-gray-500 dark:text-gray-400 ">
                         {post.frontmatter.date}
@@ -18,12 +20,21 @@ const UpdatePostPage = ({data}) => {
                         {post.frontmatter.title}
                     </h1>
                     
-                    <hr className="my-4 mt-4 mb-8 h-1 w-32 bg-orange-600 dark:bg-orange-400" />
-                    <div className="prose lg:prose-xl prose-slate dark:prose-invert">
-                        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                    <hr className="my-4 mt-4 mb-8 h-2 w-32 border-orange-600" />
+                    <div className="prose prose-xl max-w-none
+                        prose-img:rounded-xl prose-headings:underline prose-a:text-blue-500
+                        prose-slate dark:prose-invert" >
+                        <div className="mt-8" dangerouslySetInnerHTML={{ __html: post.html }}></div>
+                    </div>
+                    <div className="mt-8">
+                        <p className="text-gray-800 dark:text-gray-100 font-montserrat">
+                            
+                        </p>
                     </div>
 
                 </section>
+                </div>
+                
 
             </div>
 

@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { Dropdown } from "flowbite-react";
 
 const Header = ({ siteTitle }) => (
   <header>

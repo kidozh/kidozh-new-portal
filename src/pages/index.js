@@ -1,10 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
 
 const IndexPage = () => (
   <Layout>
@@ -17,23 +14,23 @@ const IndexPage = () => (
           The University of Manchester<span className="dark:text-orange-500 text-orange-600">.</span></p>
 
         <div className="mt-8">
-          <a href="https://github.com/kidozh"
+          <Link to="https://github.com/kidozh"
             type="button" class="text-white font-montserrat bg-gray-900 hover:bg-gray-800 
           focus:outline-none focus:ring-4  focus:ring-blue-300 font-medium 
           rounded-full text-lg px-5 py-2.5 text-center mr-2 mb-2 dark:bg-gray-800
-           dark:hover:bg-gray-900 dark:focus:ring-gray-900">Github</a>
+           dark:hover:bg-gray-900 dark:focus:ring-gray-900">Github</Link>
 
-          <a href="https://www.researchgate.net/profile/Jiduo-Zhang"
+          <Link to="https://www.researchgate.net/profile/Jiduo-Zhang"
             type="button" class="text-white font-montserrat bg-green-700 hover:bg-green-800 
           focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium 
           rounded-full text-lg px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-500
-           dark:hover:bg-green-600 dark:focus:ring-green-700">ResearchGate</a>
+           dark:hover:bg-green-600 dark:focus:ring-green-700">ResearchGate</Link>
 
-          <a href="https://scholar.google.com/citations?user=nudc3xUAAAAJ&hl=en"
+          <Link to="https://scholar.google.com/citations?user=nudc3xUAAAAJ&hl=en"
             type="button" class="text-white font-montserrat bg-blue-500 hover:bg-blue-600 
           focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium 
           rounded-full text-lg px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600
-           dark:hover:bg-blue-700 dark:focus:ring-blue-800">Google Scholar</a>
+           dark:hover:bg-blue-700 dark:focus:ring-blue-800">Google Scholar</Link>
 
         </div>
       </div>
