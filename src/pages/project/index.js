@@ -1,13 +1,12 @@
 import * as React from "react"
-import Layout from "../components/layout";
-import Seo from "../components/seo"
+import Layout from "../../components/layout";
+import Seo from "../../components/seo"
 import { Link } from "gatsby"
-import TPPBG from "../images/project/diagonal.jpg"
-import Robonauts from "../images/project/robonauts.jpg"
-import Spark from "../images/project/sparks.jpg"
-import Window from "../images/project/window.jpg"
-import Drill from "../images/project/drill.jpg"
-import PluseTrace from "../images/project/pulse-trace.jpg"
+import Robonauts from "../../images/project/robonauts.jpg"
+import Spark from "../../images/project/sparks.jpg"
+import Window from "../../images/project/window.jpg"
+import Drill from "../../images/project/drill.jpg"
+import PluseTrace from "../../images/project/pulse-trace.jpg"
 
 const ProjectCardDark = ({ title, description, link, keywords, image }) => (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden
@@ -77,7 +76,7 @@ const ProjectPage = () => (
                         <ProjectCard
                             title="TPP in process incidence identification"
                             description="Remove size limit of preceiving signals to achieve real-time process incidence identification."
-                            link="/projects/tpp"
+                            link="/project/tpp"
                             keywords="Deep learning, Tool wear, Process monitoring"
 
                         />

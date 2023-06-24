@@ -1,4 +1,4 @@
-document.onreadystatechange = function () {
+function renderThemeSwitcher() {
     if (document.readyState == "complete") {
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -47,9 +47,9 @@ document.onreadystatechange = function () {
 
         });
     }
-};
+}
 
-window.addEventListener('load', function () {
-
-});
+window.onload = function () {
+    renderThemeSwitcher();
+}
 

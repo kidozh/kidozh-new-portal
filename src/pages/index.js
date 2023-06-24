@@ -51,7 +51,8 @@ const IndexPage = () => (
     <section className="bg-blue-100 dark:bg-blue-800">
       <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
         <h1 className="text-4xl font-bold text-blue-800 dark:text-blue-400">Looking for something else?</h1>
-        <p className="text-normal font-bold text-gray-500 dark:text-gray-200 mt-4">You may find all my projects, CV on the portal page if you wish.</p>
+        <p className="text-normal font-bold text-gray-500 dark:text-gray-200 mt-4">
+          There are a few changes in the pages due to site maintenance which causes loss to serveral contents of this site.</p>
       </div>
     </section>
 
