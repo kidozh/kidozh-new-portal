@@ -61,6 +61,7 @@ module.exports = {
         jsFrontmatterEngine: false,
       },
     },
+    'gatsby-plugin-remove-serviceworker'
     
   ],
 }
