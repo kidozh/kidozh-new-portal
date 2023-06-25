@@ -13,7 +13,7 @@ const IndexPage = () => (
                     <GoFileMedia className="inline mr-8" />
                     Email
                     </h1>
-                <p class="text-2xl text-center max-w-none text-gray-600 dark:text-gray-300 mt-6 font-montserrat">
+                <p class="text-2xl text-center max-w-none break-normal text-gray-600 dark:text-gray-300 mt-6 font-montserrat">
                     jiduo.zhang<span className="dark:text-orange-500 text-orange-600">[AT]</span>postgrad.manchester.ac.uk</p>
                 <div class="inline-flex items-center justify-center w-full">
                     <hr class="w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />

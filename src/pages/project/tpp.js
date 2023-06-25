@@ -14,7 +14,7 @@ const TppPage = () => (
     <section className="bg-gray-50 dark:bg-slate-600">
       <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
         <h4 class="text-2xl font-medium text-cyan-700 dark:text-green-100 text-center">Remove input barrier in the way of deep learning in signal processing</h4>
-        <h1 className="text-8xl mt-2 text-center font-bold text-slate-900 dark:text-white">Temporal Pyramid Pooling</h1>
+        <h1 className="text-6xl md:text-8xl mt-2 text-center font-bold text-slate-900 dark:text-white">Temporal Pyramid Pooling</h1>
         <p className="mt-16 mb-0 font-bold text-gray-400 max-w-none dark:text-gray-300 text-center">
           <Link to="#">Jiduo Zhang</Link><sup>1*</sup>, &nbsp;
           <Link className="hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-150 ease-in-out" to="https://research.manchester.ac.uk/en/persons/robert.heinemann">Robert Heinemann</Link><sup>1</sup>, &nbsp;
