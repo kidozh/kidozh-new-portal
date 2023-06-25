@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="359.02191mm"
+   height="75.63356mm"
+   viewBox="0 0 359.02191 75.633559"
+   version="1.1"
+   id="svg48148"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="tpp_cnn_architecture_horizontal.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview48150"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.0037648"
+     inkscape:cx="708.16695"
+     inkscape:cy="235.55659"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="2869"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs48145">
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="3"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-30.385021,4.9910448)">
+    <rect
+       style="fill:#b0bec5;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect48632"
+       width="52.916668"
+       height="15.875"
+       x="30.385021"
+       y="-4.7607765" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="56.549946"
+       y="4.7419381"
+       id="text50140"><tspan
+         sodipodi:role="line"
+         id="tspan50138"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="56.549946"
+         y="4.7419381">Signal input</tspan></text>
+    <rect
+       style="fill:#e3f2fd;fill-opacity:1;stroke:#000000;stroke-width:0.517911;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect50142"
+       width="52.398754"
+       height="15.357089"
+       x="90.920593"
+       y="0.51791066" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="116.8168"
+       y="10.549817"
+       id="text50146"><tspan
+         sodipodi:role="line"
+         id="tspan50144"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="116.8168"
+         y="10.549817">Convolution</tspan></text>
+    <rect
+       style="fill:#fff8e1;fill-opacity:1;stroke:#000000;stroke-width:0.517911;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect50874"
+       width="52.398754"
+       height="15.357089"
+       x="90.920593"
+       y="15.875001" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="116.8168"
+       y="25.906906"
+       id="text50878"><tspan
+         sodipodi:role="line"
+         id="tspan50876"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="116.8168"
+         y="25.906906">ReLU</tspan></text>
+    <rect
+       style="fill:#e3f2fd;fill-opacity:1;stroke:#000000;stroke-width:0.517911;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect50880"
+       width="52.398754"
+       height="15.357089"
+       x="90.920593"
+       y="31.232088" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="116.8168"
+       y="41.263996"
+       id="text50884"><tspan
+         sodipodi:role="line"
+         id="tspan50882"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="116.8168"
+         y="41.263996">Convolution</tspan></text>
+    <rect
+       style="fill:#fff8e1;fill-opacity:1;stroke:#000000;stroke-width:0.517911;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect50886"
+       width="52.398754"
+       height="15.357089"
+       x="90.920593"
+       y="46.938175" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="116.8168"
+       y="56.970074"
+       id="text50890"><tspan
+         sodipodi:role="line"
+         id="tspan50888"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="116.8168"
+         y="56.970074">ReLU</tspan></text>
+    <rect
+       style="fill:#f3e5f5;fill-opacity:1;stroke:#000000;stroke-width:0.517911;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect50892"
+       width="52.398754"
+       height="15.357089"
+       x="169.60231"
+       y="23.24197" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="195.49852"
+       y="33.273869"
+       id="text50896"><tspan
+         sodipodi:role="line"
+         id="tspan50894"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="195.49852"
+         y="33.273869">MaxPooling</tspan></text>
+    <rect
+       style="fill:#e3f2fd;fill-opacity:1;stroke:#000000;stroke-width:0.517911;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect50898"
+       width="52.398754"
+       height="15.357089"
+       x="235.55649"
+       y="0.51791066" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="261.45212"
+       y="10.549806"
+       id="text50902"><tspan
+         sodipodi:role="line"
+         id="tspan50900"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="261.45212"
+         y="10.549806">Convolution</tspan></text>
+    <rect
+       style="fill:#fff8e1;fill-opacity:1;stroke:#000000;stroke-width:0.517911;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect50904"
+       width="52.398754"
+       height="15.357089"
+       x="235.55649"
+       y="15.874986" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="261.45212"
+       y="25.906891"
+       id="text50908"><tspan
+         sodipodi:role="line"
+         id="tspan50906"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="261.45212"
+         y="25.906891">ReLU</tspan></text>
+    <rect
+       style="fill:#e3f2fd;fill-opacity:1;stroke:#000000;stroke-width:0.517911;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect50910"
+       width="52.398754"
+       height="15.357089"
+       x="235.55649"
+       y="31.232071" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="261.45212"
+       y="41.263977"
+       id="text50914"><tspan
+         sodipodi:role="line"
+         id="tspan50912"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="261.45212"
+         y="41.263977">Convolution</tspan></text>
+    <rect
+       style="fill:#fff8e1;fill-opacity:1;stroke:#000000;stroke-width:0.517911;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect50916"
+       width="52.398754"
+       height="15.357089"
+       x="235.55649"
+       y="46.938156" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="261.45212"
+       y="56.970047"
+       id="text50920"><tspan
+         sodipodi:role="line"
+         id="tspan50918"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="261.45212"
+         y="56.970047">ReLU</tspan></text>
+    <rect
+       style="fill:#b2dfdb;fill-opacity:1;stroke:#000000;stroke-width:0.517911;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect50922"
+       width="52.398754"
+       height="15.357089"
+       x="316.96344"
+       y="1.6459664" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="342.85965"
+       y="11.677857"
+       id="text50926"><tspan
+         sodipodi:role="line"
+         id="tspan50924"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="342.85965"
+         y="11.677857">TPP</tspan></text>
+    <rect
+       style="fill:#efebe9;fill-opacity:1;stroke:#000000;stroke-width:0.517911;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect50928"
+       width="52.398754"
+       height="15.357089"
+       x="316.96344"
+       y="17.045425" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="342.85965"
+       y="27.077316"
+       id="text50932"><tspan
+         sodipodi:role="line"
+         id="tspan50930"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="342.85965"
+         y="27.077316">Fully connected</tspan></text>
+    <rect
+       style="fill:#b0bec5;fill-opacity:1;stroke:none;stroke-width:0.520464;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect50934"
+       width="52.916668"
+       height="15.357089"
+       x="316.6947"
+       y="55.285423" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#eceff1;fill-opacity:1;stroke:#000000;stroke-width:1.05833;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="342.59091"
+       y="64.788155"
+       id="text50938"><tspan
+         sodipodi:role="line"
+         id="tspan50936"
+         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-dasharray:none"
+         x="342.59091"
+         y="64.788155">Drilling stage</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+       d="m 343.16085,32.402514 -0.006,22.882909"
+       id="path50994"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect50928"
+       inkscape:connection-end="#rect50934" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.64444px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#b0bec5;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="153.51408"
+       y="8.5059233"
+       id="text59404"><tspan
+         sodipodi:role="line"
+         id="tspan59402"
+         style="font-size:5.64444px;fill:#000000;fill-opacity:1;stroke-width:0.529167;stroke-dasharray:none"
+         x="153.51408"
+         y="8.5059233">32@3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.64444px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#b0bec5;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="153.51408"
+       y="37.030132"
+       id="text59408"><tspan
+         sodipodi:role="line"
+         id="tspan59406"
+         style="font-size:5.64444px;fill:#000000;fill-opacity:1;stroke-width:0.529167;stroke-dasharray:none"
+         x="153.51408"
+         y="37.030132">32@3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.64444px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#b0bec5;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="299.25391"
+       y="8.499279"
+       id="text59412"><tspan
+         sodipodi:role="line"
+         id="tspan59410"
+         style="font-size:5.64444px;fill:#000000;fill-opacity:1;stroke-width:0.529167;stroke-dasharray:none"
+         x="299.25391"
+         y="8.499279">64@3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.64444px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#b0bec5;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="299.25391"
+       y="39.719891"
+       id="text60154"><tspan
+         sodipodi:role="line"
+         id="tspan60152"
+         style="font-size:5.64444px;fill:#000000;fill-opacity:1;stroke-width:0.529167;stroke-dasharray:none"
+         x="299.25391"
+         y="39.719891">64@3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.64444px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#b0bec5;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       x="380.36011"
+       y="10.792121"
+       id="text60158"><tspan
+         sodipodi:role="line"
+         id="tspan60156"
+         style="font-size:5.64444px;fill:#000000;fill-opacity:1;stroke-width:0.529167;stroke-dasharray:none"
+         x="380.36011"
+         y="10.792121">[1, 2, 4]</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart);paint-order:stroke markers fill"
+       d="m 117.11997,62.295264 v 7.963691 h 46.56506 V -4.7410448 h 31.83918 V 23.24197"
+       id="path1081"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart);paint-order:stroke markers fill"
+       d="m 195.80143,38.599059 -0.007,31.659896 h 32.05673 l 0.0173,-74.9999998 h 32.45838 l -0.003,5.25891939"
+       id="path1083"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart);paint-order:stroke markers fill"
+       d="m 261.75548,62.295245 -0.15164,7.96371 h 45.74878 V -4.7410448 h 35.81036 l -0.14396,6.3870112"
+       id="path1091"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linecap:square;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart);paint-order:stroke markers fill"
+       d="m 56.843343,11.114223 6.1e-5,59.144732 h 28.4385 V -4.7410448 h 31.334336 l -1.2e-4,5.25895546"
+       id="path1542"
+       sodipodi:nodetypes="cccccc" />
+  </g>
+</svg>
