@@ -112,7 +112,7 @@ const TppPage = () => (
         </div>
 
         <div className="">
-        <h6 className="font-bold text-normal text-gray-500 dark:text-gray-400">Accommodatable time</h6>
+        <h6 className="font-bold text-normal text-gray-500 dark:text-gray-400">Accomodatable time</h6>
           <h1 className="text-4xl mt-2 text-gray-900 dark:text-gray-100"><span className="text-bold text-8xl">∞</span></h1>
           <p className="font-bold text-normal text-gray-500 dark:text-gray-400">
             Input in any size permitted.<sup>2</sup></p>
@@ -195,7 +195,7 @@ const TppPage = () => (
           <p className="text-4xl p-8 font-normal text-blue-900 dark:text-blue-200 max-w-none">
             Jiduo would like to acknowledge the continuing contribution to this research by&nbsp;
             <Link to="https://www.csc.edu.cn/" className="hover:text-blue-700
-            transition-all duration-150 ease-in-out hover:underline
+            transition-all duration-150 ease-in-out hover:underline font-bold
             dark:hover:text-blue-200">China scholarship council</Link>.
           </p>  
         </div>
