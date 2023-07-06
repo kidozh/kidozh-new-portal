@@ -32,7 +32,8 @@ const TppPage = () => (
               dark:hover:bg-blue-700 dark:focus:ring-blue-800" to="/">Read our paper</Link>
             <Link className="px-5 py-2.5 
              text-blue-700 dark:text-blue-100
-            text-center mr-2 mb-2" to="/">View source </Link>
+            text-center mr-2 mb-2" 
+            to="https://github.com/kidozh/tpp-cnn-network-for-incidence-identification">View source </Link>
           </div>
           
         </div>
