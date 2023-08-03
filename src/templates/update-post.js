@@ -12,7 +12,7 @@ const UpdatePostPage = ({data}) => {
 
             <div className="bg-indigo-200 dark:bg-indigo-400 p-8 bg-fine-wave-bg-light dark:bg-fine-wave-bg-dark">
                 <div className="bg-gray-50 dark:bg-slate-800 rounded-xl">
-                    <section className="w-full mx-auto max-w-screen-xl px-6 pt-32">
+                    <section className="mx-auto max-w-screen-xl px-6 pt-32">
                         <h4 className="text-md font-bold font-montserrat text-gray-500 dark:text-gray-400 ">
                             {post.frontmatter.date}
                         </h4>
@@ -57,7 +57,7 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date
+        date(formatString: "YYYY-MM-DD")
       }
     }
   }
