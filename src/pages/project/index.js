@@ -30,7 +30,8 @@ const ProjectCardDark = ({ title, description, link, keywords, image }) => (
             <p className="mt-8 font-montserrat text-normal mb-24 
              text-gray-200 border-b-orange-700 ">{description}</p>
             <h2 className="text-2xl font-montserrat font-bold text-white">{title}</h2>
-            <hr className="h-1 my-8 w-16 mt-2 mb-6 border-2 bg-orange-400 dark:bg-indigo-400" />
+            <hr className="h-1 my-8 w-16 mt-2 mb-6 border-2 bg-orange-400 border-orange-400
+             dark:bg-indigo-400 dark:border-indigo-400" />
 
             <p className="mt-4 font-montserrat text-sm font-light text-gray-300">{keywords}</p>
         </div>
@@ -56,8 +57,10 @@ const ProjectCard = ({ title, description, link, keywords }) => (
             <p className="mt-8 font-montserrat text-normal mb-24 text-gray-700
              dark:text-gray-200 border-b-orange-700">{description}</p>
             <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">{title}</h2>
-            <hr className="h-1 my-8 w-16 mt-2 mb-6 bg-orange-500
-             border-2 dark:bg-indigo-500 group-hover:dark:bg-slate-100 group-hover:bg-red-600" />
+            <hr className="h-1 my-8 w-16 mt-2 mb-6 bg-orange-500 border-orange-500
+             border-2 dark:bg-indigo-500 dark:border-indigo-500
+              group-hover:dark:bg-slate-100 group-hover:dark:border-slate-100
+               group-hover:bg-red-600 group-hover:border-red-600" />
 
             <p className="mt-4 font-montserrat text-sm font-light text-gray-700 dark:text-gray-400 group-hover:dark:text-gray-200">{keywords}</p>
         </div>

@@ -41,7 +41,7 @@ const IndexPage = ({data}) => {
       </section>
       <section className="bg-gray-100 dark:bg-gray-900">
         <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
-          <h1 className="text-4xl font-bold text-gray-800 dark:text-white">📢 Latest <span className="bg-orange-300 dark:bg-orange-600 text-underline">update</span></h1>
+          <h1 className="text-4xl font-bold font-montserrat text-gray-800 dark:text-white">📢 Latest <span className="bg-orange-300 dark:bg-orange-600 text-underline">update</span></h1>
             {
             posts.map(post => (
               <p key={post.excerpt} className="text-light text-gray-800 dark:text-gray-200 break-normal mt-4 font-normal">
@@ -49,7 +49,6 @@ const IndexPage = ({data}) => {
                 <Link to={post.fields.slug}
                  className="text-gray-700 dark:text-gray-300 font-bold
                   transition-all duration-300 ease-in-out
-
                   hover:text-gray-600 hover:underline-offset-4
                   dark:hover:text-gray-300 dark:hover:underline-offset-4">{post.frontmatter.excerpt}</Link>
               </p>

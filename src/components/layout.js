@@ -25,6 +25,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      {/* <Script src="/js/theme-switch.js" id="theme-switcher-raw" defer strategy="idle"></Script>
+      <Script id="render-theme-switcher" defer strategy="idle">{`renderThemeSwitcher();`}</Script> */}
+
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       
         <main>{children}</main>

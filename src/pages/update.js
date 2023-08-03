@@ -9,13 +9,15 @@ const BlogCard = ({ title, author, date, excerpt, link }) => (
   <div to={link} className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden
       dark:hover:bg-gradient-to-r dark:hover:from-cyan-500 dark:hover:to-blue-500
       hover:bg-gradient-to-r hover:from-orange-200 hover:to-red-200
-      hover:scale-105
+      hover:scale-105 m-4
       group hover:transition-all duration-500 ease-in-out">
         <Link to={link}>
           <div className="px-8 py-12">
             <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">{title}</h2>
-            <hr className="h-1 my-8 w-32 mt-2 mb-4 bg-orange-500
-            border-2 dark:bg-indigo-500 group-hover:dark:bg-slate-100 group-hover:bg-red-600" />
+            <hr className="h-1 my-8 w-32 mt-2 mb-4 bg-orange-500 border-orange-500
+            border-2 dark:bg-indigo-500 dark:border-indigo-500
+             group-hover:dark:bg-slate-100 group-hover:dark:border-slate-100
+              group-hover:bg-red-600 group-hover:border-red-600" />
             <p className="mt-4 font-light text-normal text-gray-700
             dark:text-gray-200 border-b-orange-700">{excerpt}</p>
 
@@ -63,7 +65,7 @@ const UpdatePage = ({ data }) => {
 
 export const pageQuery = graphql`
   query MyQuery {
-    blog: allMarkdownRemark {
+    blog: allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
       posts: nodes {
         frontmatter {
           date(fromNow: true)
