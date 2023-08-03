@@ -13,6 +13,7 @@
     "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^5.11.0",
+    "gatsby-remark-images": "^7.11.0",
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-remark": "^6.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
