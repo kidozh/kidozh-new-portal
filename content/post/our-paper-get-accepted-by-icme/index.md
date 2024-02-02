@@ -13,3 +13,7 @@ According to the email confirmed by the organiser of CIRP ICME '27, our paper en
 We made a special page for this paper to demonstrate its details. If you feel interested, please visit [TPP project](/project/tpp)
 
 ![Image taken in ICME](./cirp-presentation.jpg)
+
+### Please note
+
+Due to the copyright issue, we are not able to share the full paper here. Please keep an eye on the official website of CIRP ICME '27 for the latest publication information. 

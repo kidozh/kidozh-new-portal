@@ -68,7 +68,7 @@ export const pageQuery = graphql`
     blog: allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
       posts: nodes {
         frontmatter {
-          date(fromNow: true)
+          date(formatString: "YYYY-MM-DD")
           title
           author
           excerpt
