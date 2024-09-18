@@ -30,10 +30,10 @@ const IndexPage = () => (
                     Location
                 </h1>
                 <p class="text-2xl text-center max-w-none text-gray-600 dark:text-gray-300 mt-16 font-montserrat">
-                    School of Engineering, The University of Manchester
+                    Department of Mechanical and Aerospace Engineering, School of Engineering, The University of Manchester
                 </p>
                 <p class="text-2xl text-center max-w-none text-gray-600 dark:text-gray-300 font-montserrat mt-4">
-                    Core 1 North, Floor 4th, Engineering A building, Booth St E, Manchester&nbsp;
+                    Core 1 North, Floor 4th, Nancy Rothwell Building, Booth St E, Manchester&nbsp;
                      <span className="dark:text-orange-500 text-orange-600">M13</span>, the United Kingdom</p>
             </div>
         </section>
