@@ -84,6 +84,14 @@ const ProjectPage = () => (
 
                         />
 
+                        <ProjectCard
+                            title="Multi-objective prediction in drilling hybrid stacks"
+                            description="Achieve multi-objectives prediction in one unified model."
+                            link="/project/hybrid-prediction"
+                            keywords="Deep learning, Tool wear, Process monitoring"
+
+                        />
+
                     </div>
                 </div>
 

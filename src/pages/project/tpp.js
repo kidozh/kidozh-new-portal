@@ -29,7 +29,7 @@ const TppPage = () => (
             focus:ring-4 focus:ring-blue-300 
             font-medium rounded-full text-normal px-5 py-2.5 
             text-center mr-2 mb-2 dark:bg-blue-600
-              dark:hover:bg-blue-700 dark:focus:ring-blue-800" to="/">Read our paper</Link>
+              dark:hover:bg-blue-700 dark:focus:ring-blue-800" to="#">Read our paper (Procedia CIRP)</Link>
             <Link className="px-5 py-2.5 
              text-blue-700 dark:text-blue-100
             text-center mr-2 mb-2" 
