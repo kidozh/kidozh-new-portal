@@ -13,21 +13,21 @@ const TppPage = () => (
   <Layout>
     <section className="bg-blue-800 dark:bg-green-600">
       <div className="w-full mx-auto max-w-screen-xl px-6 py-3">
-        <h4 class="text-xl font-medium text-blue-50 dark:text-green-100 text-center">
-          <Link to="/project/tpp-zh">查看中文界面</Link>
+        <h4 class="text-xl font-medium text-white dark:text-white text-center">
+          <Link to="/project/tpp">English version available.</Link>
           </h4>
       </div>
     </section>
     <section className="bg-gray-50 dark:bg-slate-600">
       <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
-        <h4 class="text-2xl font-medium text-cyan-700 dark:text-green-100 text-center">Remove input barrier in the way of deep learning in signal processing</h4>
-        <h1 className="text-7xl md:text-8xl mt-2 text-center font-bold text-slate-900 dark:text-white">Temporal Pyramid Pooling</h1>
+        <h4 class="text-2xl font-medium text-cyan-700 dark:text-green-100 text-center">消除深度学习模型处理信号的输入障碍</h4>
+        <h1 className="text-7xl md:text-8xl mt-2 text-center font-bold text-slate-900 dark:text-white">时间金字塔池化模型</h1>
         <p className="mt-16 mb-0 font-bold text-gray-400 max-w-none dark:text-gray-300 text-center">
           <Link to="#">Jiduo Zhang</Link><sup>1*</sup>, &nbsp;
           <Link className="hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-150 ease-in-out" to="https://research.manchester.ac.uk/en/persons/robert.heinemann">Robert Heinemann</Link><sup>1</sup>, &nbsp;
           <Link className="hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-150 ease-in-out" to="https://research.manchester.ac.uk/en/persons/ottojan.bakker">Otto Jan Bakker</Link><sup>1</sup>, &nbsp;
           <Link className="hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-150 ease-in-out" to="https://www.researchgate.net/profile/Menghui-Zhu">Menghui Zhu</Link><sup>1</sup></p>
-        <p className="font-bold text-gray-400 max-w-none dark:text-gray-300 mt-0 text-center"><sup>1</sup> School of Engineering, The University of Manchester</p>
+        <p className="font-bold text-gray-400 max-w-none dark:text-gray-300 mt-0 text-center"><sup>1</sup> 曼彻斯特大学工学院</p>
 
         <div className="mt-12 flex-1 justify-items-center">
           <div className="flex justify-center">
@@ -36,11 +36,11 @@ const TppPage = () => (
             focus:ring-4 focus:ring-blue-300 
             font-medium rounded-full text-normal px-5 py-2.5 
             text-center mr-2 mb-2 dark:bg-blue-600
-              dark:hover:bg-blue-700 dark:focus:ring-blue-800" to="https://doi.org/10.1016/j.procir.2024.08.406">Read our paper</Link>
+              dark:hover:bg-blue-700 dark:focus:ring-blue-800" to="https://doi.org/10.1016/j.procir.2024.08.406">查看我们的会议论文</Link>
             <Link className="px-5 py-2.5 
              text-blue-700 dark:text-blue-100
             text-center mr-2 mb-2" 
-            to="https://github.com/kidozh/tpp-cnn-network-for-incidence-identification">View source </Link>
+            to="https://github.com/kidozh/tpp-cnn-network-for-incidence-identification">查看源代码</Link>
           </div>
           
         </div>
@@ -51,22 +51,16 @@ const TppPage = () => (
       <div className="w-full mx-auto max-w-screen-xl px-6 py-16 lg:flex">
         {/* should place a TPP model here */}
         <div className="flex-1 p-6">
-          <h1 className="text-2xl mt-2 font-bold text-cyan-700 dark:text-cyan-200">Divide and pool</h1>
+          <h1 className="text-2xl mt-2 font-bold text-cyan-700 dark:text-cyan-200">分而池之</h1>
           <p className="text-xl mt-2 font-normal text-slate-500 dark:text-gray-400 max-w-none">
-            <b className="font-bold text-slate-700 dark:text-gray-100">Constant-shaped
-            output.</b> As shown in the figure, 
-            three pool numbers (1, 2 and 4) are employed, which produces 
-            regions consisting of one vector with shape (N, L, C),
-             two vectors with shape (N, L/2, C) and four vectors
-              with shape (N, L/4, C). Then max pooling operations 
-              are conducted in these vectors, and the resulting
-               maximum values are concentrated into a one-dimensioned 
-               vector shaped as (N, (1+2+4)*C) , which produces a constant
-                shaped output for an input of any length. </p>
+            <b className="font-bold text-slate-700 dark:text-gray-100">恒定形状的输出</b> &nbsp;
+            正如图片所示，我们使用了三个池编号（1、2和4），这产生了由一个形状为（N，L，C），两个(N, L/2, C)， 三个(N, L/4, C)的向量组成的输出，
+            然后在这些向量上进行最大池化操作，将结果的最大值集中到一个形状为（N，(1+2+4)*C）的一维向量中，这为任何长度的输入产生了一个恒定形状的输出。
+            </p>
         </div>
         <div className="lg:shrink-0" >
           <div className="p-6 flex-1 justify-item-center">
-            <img className="max-w-full flex justify-center border-r-8 rounded-2xl dark:shadow-xl dark:bg-slate-200" src={TppImage} alt="TPP model" />
+            <img className="max-w-full flex justify-center border-r-8 rounded-2xl dark:shadow-xl dark:bg-slate-200" src={TppImage} alt="时间金字塔池化模型" />
           </div>
           
         </div>
@@ -76,12 +70,11 @@ const TppPage = () => (
     <section className="bg-gray-50 dark:bg-slate-800">
       <div className="w-full mx-auto max-w-screen-xl px-6 pt-16">
         <div className="flex-1 p-6">
-          <h1 className="text-2xl mt-2 font-bold text-cyan-700 dark:text-cyan-200">A perfect match</h1>
+          <h1 className="text-2xl mt-2 font-bold text-cyan-700 dark:text-cyan-200">天生一对</h1>
           <p className="text-xl mt-2 font-normal text-slate-500 dark:text-gray-400 max-w-none">
-          <b className="font-bold text-slate-700 dark:text-gray-100">Incredible speed and minimum size.</b>&nbsp;
-            With the utilisation of convolutional neural network (CNN), the TPP-CNN model could recognise
-            both fine and macro structures of the signal with shared weights and minimum parameters, deployable for
-            embleed devices and their integrated system.
+          <b className="font-bold text-slate-700 dark:text-gray-100">在很小的模型下实现极快的处理速度</b>&nbsp;
+            通过使用卷积神经网络（CNN），金字塔池化卷积神经网络可以识别信号的细微和宏观结构，共享权重，从而实现最小的参数以识别工况。
+            其可较好的部署于嵌入式设备及其集成系统。
           </p>
         </div>
         
@@ -94,7 +87,7 @@ const TppPage = () => (
       <div className="w-full mx-auto max-w-screen-xl px-6 pb-16" >
           <div className="p-6 flex-1 justify-item-center">
             <img className="max-w-full flex justify-center border-r-8 p-6 rounded-2xl 
-            dark:shadow-xl dark:bg-slate-200" src={TppCNNImage} alt="TPP model" />
+            dark:shadow-xl dark:bg-slate-200" src={TppCNNImage} alt="金字塔池化卷积神经网络" />
           </div>
           
         </div>
@@ -113,49 +106,45 @@ const TppPage = () => (
         
 
         <div className="">
-          <h6 className="font-bold text-normal text-gray-500 dark:text-gray-400">Accuracy</h6>
+          <h6 className="font-bold text-normal text-gray-500 dark:text-gray-400">准确度</h6>
           <h1 className="text-4xl mt-2 text-gray-900 dark:text-gray-100">
             <span className="text-bold text-8xl">99</span>%</h1>
-          <p className="font-bold text-normal text-gray-500 dark:text-gray-400">In identify incidence.</p>
+          <p className="font-bold text-normal text-gray-500 dark:text-gray-400">对于切削工况的识别</p>
         </div>
 
         <div className="">
-        <h6 className="font-bold text-normal text-gray-500 dark:text-gray-400">Accomodatable time</h6>
+        <h6 className="font-bold text-normal text-gray-500 dark:text-gray-400">允许的输入时间</h6>
           <h1 className="text-4xl mt-2 text-gray-900 dark:text-gray-100"><span className="text-bold text-8xl">∞</span></h1>
           <p className="font-bold text-normal text-gray-500 dark:text-gray-400">
-            Input in any size permitted.<sup>2</sup></p>
+            允许任意尺寸的输入<sup>2</sup></p>
         </div>
 
         <div className="">
-          <h6 className="font-bold text-normal text-gray-500 dark:text-gray-400">Up to</h6>
+          <h6 className="font-bold text-normal text-gray-500 dark:text-gray-400">运算率</h6>
           <h1 className="text-4xl mt-2 text-gray-900 dark:text-gray-100"><span className="text-bold text-8xl">50</span></h1>
           <p className="font-bold text-normal text-gray-500 dark:text-gray-400">
-            Identification times in 1 second.<sup>3</sup></p>
+            一秒内可以实现至多50次运算<sup>3</sup></p>
         </div>
       </div>
       
       <div className="w-full mx-auto max-w-screen-xl px-6 py-8">
         <p className="text-xl mt-2 font-normal text-slate-500 dark:text-gray-400 max-w-none">
-          <b className="font-bold text-slate-700 dark:text-gray-100">One for all.</b>&nbsp;
-            The proposed method allows deep learning model to process signal in any length, which could archieve
-            both high accuracy and immediate response at one model.
+          <b className="font-bold text-slate-700 dark:text-gray-100">一劳永逸</b>&nbsp;
+            与传统模型相比，该方法能够准确识别不同频率和持续时间组合的工况事件，一旦训练良好，即可节省重建、重新训练和重新测试模型的时间。
         </p>
 
         <p className="text-xl mt-2 font-normal text-slate-500 dark:text-gray-400 max-w-none">
-          <b className="font-bold text-slate-700 dark:text-gray-100">Wide-spectrum and reusable.</b>&nbsp;
-            Compared with the traditional model, the proposed method could accurately identify process incidences 
-            for different combination of frequency and duration
-            once it get well trained, thereby saving the time in rebuilding, retraining
-             and retesting the models .
+          <b className="font-bold text-slate-700 dark:text-gray-100">广谱高效</b>&nbsp;
+            与传统模型相比，该方法能够准确识别不同频率和持续时间组合的工况事件。
+            
         </p>
 
         <p className="text-sm mt-16 font-normal text-slate-500 dark:text-gray-400 max-w-none">
-          <sup>2</sup>: Subject to the hardware and software environment, 
-          excessive sized input will generate gaint feature maps and therefore exhaust computation resources.
+          <sup>2</sup>: 受硬件和软件环境的限制，过大的输入会生成巨大的特征图，从而耗尽计算资源。
         </p>
         <p className="text-sm font-normal text-slate-500 dark:text-gray-400 max-w-none">
-          <sup>3</sup>: The test was conducted on the environment of NVIDIA RTX 3080 with CUDA 11,
-          and sampling duration is 0.1s with the frequency of 1KHz.
+          <sup>3</sup>:  该测试在NVIDIA RTX 3080的CUDA 11环境下进行，采样持续时间为0.1s，频率为1KHz。
+          
         </p>
 
       </div>
@@ -164,10 +153,7 @@ const TppPage = () => (
     <section className="bg-gray-100 dark:bg-slate-700">
       <div className="w-full mx-auto max-w-screen-xl px-6 py-16">
         <p className="text-2xl mt-2 text-gray-500 dark:text-gray-300 max-w-none">
-          Given that the proposed method could be applied to any signal processing task, high-accuracy and
-          immediate monitoring by deep learning approach could be achieved in a wide range of applications.
-          Furthermore, we hope that this method could be a potential solution to the problem of general tool condition
-          monitoring in the manufacturing industry.
+          由于该方法可以应用于任何信号处理任务，因此其可以在广泛的应用中实现深度学习方法的高精度和即时监控。此外，我们希望这种方法可以成为制造业中通用工具状态监测问题的潜在解决方案。
         </p>
       </div>
     </section>
@@ -183,14 +169,14 @@ const TppPage = () => (
         <div className="flex-1 p-6">
           <h1 className="text-2xl
           text-gray-500 dark:text-gray-200">
-            The paper entitled "In-process tool incidence identification based 
-            on temporal pyramid pooling and convolutional neural network" 
-            has been <b className="text-bold text-gray-900 dark:text-gray-100">accepted</b> by&nbsp;
+            此工作题为 "基于时间金字塔池化和卷积神经网络的切削工况识别"已被
             <Link className="text-gray-500 dark:text-gray-200
             ease-in-out hover:text-green-700 dark:hover:text-green-400
             hover:underline transition-all duration-300"
-             to="https://cirpicme.org/">17th CIRP Conference on
-              Intelligent Computation in Manufacturing Engineering.</Link>
+             to="https://cirpicme.org/">
+              17届CIRP智能制造工程计算会议</Link>
+            <b className="text-bold text-gray-900 dark:text-gray-100">接收</b>。
+            
           </h1>
         </div>
         
@@ -201,10 +187,10 @@ const TppPage = () => (
       <div className="w-full mx-auto max-w-screen-xl px-6 py-8 lg:flex align-middle">
         <div className="flex-1 justify-center align-middle">
           <p className="text-4xl p-8 font-normal text-blue-900 dark:text-blue-200 max-w-none">
-            Jiduo would like to acknowledge the continuing contribution to this research by&nbsp;
+            纪铎谨在此感谢
             <Link to="https://www.csc.edu.cn/" className="hover:text-blue-700
             transition-all duration-150 ease-in-out hover:underline font-bold
-            dark:hover:text-blue-200">China scholarship council</Link>.
+            dark:hover:text-blue-200">国家留学基金委</Link>对于本项目的持续资助。
           </p>  
         </div>
 
@@ -225,10 +211,10 @@ const TppPage = () => (
     <section className="bg-gray-100 dark:bg-gray-700">
       <div className="w-full mx-auto max-w-screen-xl px-6 py-8">
         <p className="text-2xl mt-2 font-normal text-gray-500 dark:text-gray-200 max-w-none">
-          If you have any questions or suggestions, please feel free to&nbsp;
+          如果您对于我们的工作有任何问题或建议，请随时&nbsp;
            <Link to="/contact" className="text-blue-500 dark:text-blue-200 hover:text-blue-700
            transition-all duration-150 ease-in-out underline
-           dark:hover:text-blue-200">contact us</Link>.
+           dark:hover:text-blue-200">联系我</Link>.
         </p>  
       </div>
 
@@ -242,6 +228,6 @@ const TppPage = () => (
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="In-process tool incidence identification based on temporal pyramid pooling and convolutional neural network" />
+export const Head = () => <Seo title="使用金字塔池化的卷积神经网络识别叠层材料的加工工况" />
 
 export default TppPage
