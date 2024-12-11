@@ -15,7 +15,6 @@ module.exports = {
     siteUrl: `https://kidozh.com/`,
   },
   plugins: [
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
