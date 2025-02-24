@@ -19,8 +19,8 @@ const CVPage = () => (
                             </div>
                         </div>
                         <div class="place-self-end grid justify-items-end">
-                            <h1 class="text-7xl font-extrabold">Jiduo Zhang</h1>
-                            <p class="text-xl mt-5">PhD student in The University of Manchester</p>
+                            <h1 class="text-7xl font-extrabold font-montserrat">Jiduo Zhang</h1>
+                            <p class="text-xl mt-5 font-roboto">PhD student in The University of Manchester</p>
                         </div>
                     </div>
 
@@ -76,7 +76,7 @@ const CVPage = () => (
                     </div>
                     <div class="md:col-span-4">
                         <section>
-                            <h2 class="text-2xl pb-1 border-b font-semibold">About</h2>
+                            <h2 class="text-2xl pb-1 border-b font-semibold font-montserrat">About</h2>
                             <p class="mt-4">Jiduo is currently a PhD student at The University of Manchester (UoM).
                             Piror to this, he obtained his BSc and Msc degree in Aircraft Manufacturing at Northwestern
                              Polytechnical University (NPU) in China. By the exchange program between NPU and RWTH Aachen,
@@ -89,7 +89,7 @@ const CVPage = () => (
 
                         </section>
                         <section>
-                            <h2 class="text-2xl mt-6 pb-1 border-b font-semibold">Projects</h2>
+                            <h2 class="text-2xl mt-6 pb-1 border-b font-semibold font-montserrat">Projects</h2>
                             {/* <ul class="mt-1">
                                 <li class="py-2">
                                     <div class="flex justify-between my-1">
@@ -191,24 +191,50 @@ const CVPage = () => (
                         </section>
 
                         <section>
-                            <h2 class="text-2xl mt-6 pb-1 border-b font-semibold">Publication</h2>
-                            <p class="mt-4">
+                            <h2 class="text-2xl mt-6 pb-1 border-b font-semibold font-montserrat">Selected Publications</h2>
+
+                            <p class="mt-2 border-l-8 border-blue-600 dark:border-green-600 pl-2 bg-blue-50 dark:bg-green-800 p-4 font-roboto">
                                 Please visit the <a className="text-blue-500
                                  dark:text-blue-300 hover:text-blue-900
-                                  hover:dark:text-blue-100" href="https://scholar.google.com/citations?user=nudc3xUAAAAJ">Google scholar</a> to get detailed information about my publication.</p>
+                                  hover:dark:text-blue-100" href="https://scholar.google.com/citations?user=nudc3xUAAAAJ">Google scholar</a> to view all of my publication.</p>
+
+                            <ul class="mt-1 list-decimal list-inside">
+                                <li class="py-2">
+                                    <strong>Zhang, Jiduo</strong>, Robert Heinemann, Otto Jan Bakker, Siqi Li, Xiaoyu Xiao, and Yixian Ding. "Minimum Sufficient Signal Condition of Identifying Process Incidence in Stacked Drilling Through Deep Learning." <i>Mechanical Systems and Signal Processing</i>. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q1 TOP</span> <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">中科院一区 TOP</span>
+                                </li>
+                                <li class="py-2">
+                                    <strong>Zhang, J.</strong>, Heinemann, R, Bakker OJ. (2025). Process incidence monitoring in material identification during drilling stacked structures using support vector machine. The International Journal of Advanced Manufacturing Technology, 136(2), 827-840. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q2</span>
+                                </li>
+
+                                <li class="py-2">
+                                    Sun, Huibin, <strong>Jiduo Zhang</strong>, Rong Mo, and Xianzhi Zhang. "In-process tool condition forecasting based on a deep learning method." <i>Robotics and Computer-Integrated Manufacturing</i> 64 (2020): 101924. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q1 TOP</span> <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">中科院一区 TOP</span>
+                                </li>
+
+                                <li class="py-2">
+                                    Sun, Huibin, Junlin Pan, <strong>Jiduo Zhang</strong>, and Dali Cao. "Non-linear Wiener process–based cutting tool remaining useful life prediction considering measurement variability." <i>The International Journal of Advanced Manufacturing Technology</i> 107, no. 11 (2020): 4493-4502. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q2</span>
+                                </li>
+
+                                <li class="py-2">
+                                    Sun, Huibing, Junling Pan, <strong>Jiduo Zhang</strong>, and Rong Mo. "Digital twin model for cutting tools in machining process." <i>Computer Integrated Manufacturing Systems</i> 25, no. 6 (2019): 1474-1480. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q1 TOP</span>
+                                </li>
+                                
+                            </ul>
+
+
+                            
                         </section>
                         
                         <section>
-                            <h2 class="text-2xl mt-6 pb-1 border-b font-semibold">Education</h2>
+                            <h2 class="text-2xl mt-6 pb-1 border-b font-semibold font-montserrat">Education</h2>
                             <ul class="mt-2">
                                 <li class="pt-4">
                                     <p class="flex justify-between text-sm"><strong class="text-base">The University of Manchester
                                     </strong>2021-present</p>
-                                    <p class="flex justify-between text-sm">Mechanical Engineering</p>
+                                    <p class="flex justify-between text-sm">PhD in Mechanical Engineering</p>
                                 </li>
                                 <li class="pt-4">
                                     <p class="flex justify-between text-sm"><strong class="text-base">Northwestern Polytechnical Univerisity</strong>2017-2020</p>
-                                    <p class="flex justify-between text-sm">Aircraft Manufacturing<small>GPA 85/100</small></p>
+                                    <p class="flex justify-between text-sm">MEng in Aircraft Manufacturing<small>GPA 85/100</small></p>
                                 </li>
                                 <li class="pt-4">
                                     <p class="flex justify-between text-sm"><strong class="text-base">RWTH Aachen University</strong>2016-2017</p>
@@ -216,7 +242,7 @@ const CVPage = () => (
                                 </li>
                                 <li class="pt-4">
                                     <p class="flex justify-between text-sm"><strong class="text-base">Honors College, Northwestern Polytechnical Univerisity</strong>2013-2017</p>
-                                    <p class="flex justify-between text-sm">Aerocraft Manufacturing Engineering<small>GPA 85/100</small></p>
+                                    <p class="flex justify-between text-sm">B.Sc. (Hons) in Aerocraft Manufacturing Engineering<small>GPA 85/100</small></p>
                                 </li>
                             </ul>
                         </section>

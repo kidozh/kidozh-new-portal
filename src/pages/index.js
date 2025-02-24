@@ -40,8 +40,8 @@ const IndexPage = ({data}) => {
         </div>
       </section>
       <section className="bg-gray-100 dark:bg-gray-900">
-        <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
-          <h1 className="text-4xl font-bold font-montserrat text-gray-800 dark:text-white">📢 Latest <span className="bg-orange-300 dark:bg-orange-600 text-underline">update</span></h1>
+        <div className="w-full mx-auto max-w-screen-xl px-6 py-16">
+          <h1 className="text-4xl font-bold font-montserrat text-gray-800 dark:text-white">📢 Latest <span className="bg-orange-300 dark:bg-orange-600 text-underline hover:bg-orange-600 hover:text-white hover:dark:bg-orange-800 hover:transition-all duration-500 ease-in-out">update</span></h1>
             {
             posts.map(post => (
               <p key={post.excerpt} className="text-light text-gray-800 dark:text-gray-200 break-normal mt-4 font-normal">

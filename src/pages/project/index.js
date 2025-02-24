@@ -77,6 +77,15 @@ const ProjectPage = () => (
                     <p className="text-normal font-bold text-gray-500 dark:text-gray-200 mt-4 font-normal">Under the supervision of Dr Robert Heinemann and Otto Jan Bakker.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                         <ProjectCard
+                            title="SVM in process incidence identification"
+                            description="Accurate and intepretable process incidence identification using support vector machine."
+                            link="#"
+                            keywords="Machine learning, Feature analysis, Process monitoring"
+
+                        />
+
+
+                        <ProjectCard
                             title="TPP in process incidence identification"
                             description="Remove size limit of preceiving signals to achieve real-time process incidence identification."
                             link="/project/tpp"
