@@ -200,22 +200,22 @@ const CVPage = () => (
 
                             <ul class="mt-1 list-decimal list-inside">
                                 <li class="py-2">
-                                    <strong>Zhang, Jiduo</strong>, Robert Heinemann, Otto Jan Bakker, Siqi Li, Xiaoyu Xiao, and Yixian Ding. "Minimum Sufficient Signal Condition of Identifying Process Incidence in Stacked Drilling Through Deep Learning." <i>Mechanical Systems and Signal Processing</i>. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q1 TOP</span> <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">中科院一区 TOP</span>
+                                    <strong class="underline">Jiduo Zhang</strong>, Robert Heinemann, Otto Jan Bakker, Siqi Li, Xiaoyu Xiao, and Yixian Ding. "Minimum Sufficient Signal Condition of Identifying Process Incidence in Stacked Drilling Through Deep Learning." <i>Mechanical Systems and Signal Processing</i>. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q1 TOP</span> <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">中科院一区 TOP</span>
                                 </li>
                                 <li class="py-2">
-                                    <strong>Zhang, J.</strong>, Heinemann, R, Bakker OJ. (2025). Process incidence monitoring in material identification during drilling stacked structures using support vector machine. The International Journal of Advanced Manufacturing Technology, 136(2), 827-840. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q2</span>
-                                </li>
-
-                                <li class="py-2">
-                                    Sun, Huibin, <strong>Jiduo Zhang</strong>, Rong Mo, and Xianzhi Zhang. "In-process tool condition forecasting based on a deep learning method." <i>Robotics and Computer-Integrated Manufacturing</i> 64 (2020): 101924. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q1 TOP</span> <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">中科院一区 TOP</span>
+                                    <strong class="underline">Zhang, J.</strong>, Heinemann, R, Bakker OJ. (2025). Process incidence monitoring in material identification during drilling stacked structures using support vector machine. The International Journal of Advanced Manufacturing Technology, 136(2), 827-840. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q2</span>
                                 </li>
 
                                 <li class="py-2">
-                                    Sun, Huibin, Junlin Pan, <strong>Jiduo Zhang</strong>, and Dali Cao. "Non-linear Wiener process–based cutting tool remaining useful life prediction considering measurement variability." <i>The International Journal of Advanced Manufacturing Technology</i> 107, no. 11 (2020): 4493-4502. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q2</span>
+                                    Sun, Huibin, <strong class="underline">Jiduo Zhang</strong>, Rong Mo, and Xianzhi Zhang. "In-process tool condition forecasting based on a deep learning method." <i>Robotics and Computer-Integrated Manufacturing</i> 64 (2020): 101924. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q1 TOP</span> <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">中科院一区 TOP</span>
                                 </li>
 
                                 <li class="py-2">
-                                    Sun, Huibing, Junling Pan, <strong>Jiduo Zhang</strong>, and Rong Mo. "Digital twin model for cutting tools in machining process." <i>Computer Integrated Manufacturing Systems</i> 25, no. 6 (2019): 1474-1480. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q1 TOP</span>
+                                    Sun, Huibin, Junlin Pan, <strong class="underline">Jiduo Zhang</strong>, and Dali Cao. "Non-linear Wiener process–based cutting tool remaining useful life prediction considering measurement variability." <i>The International Journal of Advanced Manufacturing Technology</i> 107, no. 11 (2020): 4493-4502. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q2</span>
+                                </li>
+
+                                <li class="py-2">
+                                    Sun, Huibing, Junling Pan, <strong class="underline">Jiduo Zhang</strong>, and Rong Mo. "Digital twin model for cutting tools in machining process." <i>Computer Integrated Manufacturing Systems</i> 25, no. 6 (2019): 1474-1480. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded break-keep">JCR Q1 TOP</span>
                                 </li>
                                 
                             </ul>
