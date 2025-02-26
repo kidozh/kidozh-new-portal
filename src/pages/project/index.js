@@ -7,6 +7,8 @@ import Spark from "../../images/project/sparks.jpg"
 import Window from "../../images/project/window.jpg"
 import Drill from "../../images/project/drill.jpg"
 import PluseTrace from "../../images/project/pulse-trace.jpg"
+import DnaSignalForm from "../../images/project/gene-6527964.jpg"
+import GalaxyImage from "../../images/project/galaxy-2357413_1920.jpg"
 
 const ProjectCardDark = ({ title, description, link, keywords, image }) => (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden
@@ -76,6 +78,14 @@ const ProjectPage = () => (
                         PhD academic projects in <span className="bg-purple-200 dark:bg-purple-600 font-montserrat">The University of Manchester</span></h1>
                     <p className="text-normal font-bold text-gray-500 dark:text-gray-200 mt-4 font-normal">Under the supervision of Dr Robert Heinemann and Otto Jan Bakker.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+                        <ProjectCardDark
+                            title="Minimum sufficient signal condition in representing events"
+                            description="The most basic unit of signal structure to represent events in machining process."
+                            link="/project/manchester-unit"
+                            keywords="Deep Learning, Machine Signal"
+                            image={DnaSignalForm}
+                        />
+
                         <ProjectCard
                             title="SVM in process incidence identification"
                             description="Accurate and intepretable process incidence identification using support vector machine."
@@ -85,11 +95,12 @@ const ProjectPage = () => (
                         />
 
 
-                        <ProjectCard
+                        <ProjectCardDark
                             title="TPP in process incidence identification"
                             description="Remove size limit of preceiving signals to achieve real-time process incidence identification."
                             link="/project/tpp"
                             keywords="Deep learning, Tool wear, Process monitoring"
+                            image={GalaxyImage}
 
                         />
 

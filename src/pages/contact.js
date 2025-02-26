@@ -39,13 +39,10 @@ const IndexPage = () => (
         </section>
         <section className="bg-blue-100 dark:bg-blue-900">
             <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
-                <h1 className="text-4xl font-bold text-blue-800 dark:text-blue-100">These email addresses are no longer being monitored:</h1>
-                <ul className="list-none p-6
-
-         hover:list-disc transition-all 
-         duration-700">
-                    <li className=" text-gray-600 dark:text-gray-300 mt-6 font-montserrat">kidozh[AT]mail.nwpu.edu.cn</li>
-                    <li className=" text-gray-600 dark:text-gray-300 mt-6 font-montserrat">jiduo.zhang[AT]rwth-aachen.de</li>
+                <h1 className="text-4xl font-bold text-blue-800 dark:text-blue-100 font-montserrat">These email addresses are no longer being monitored:</h1>
+                <ul className="list-none p-6 font-roboto list-disc transition-all duration-700">
+                    <li className=" text-gray-600 dark:text-gray-300 mt-6">kidozh[AT]mail.nwpu.edu.cn</li>
+                    <li className=" text-gray-600 dark:text-gray-300 mt-6">jiduo.zhang[AT]rwth-aachen.de</li>
 
                 </ul>
             </div>
