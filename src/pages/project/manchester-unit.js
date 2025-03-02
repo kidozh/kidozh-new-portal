@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from "react"
 
 
 import Layout from "../../components/layout"
@@ -24,16 +25,16 @@ const TppPage = () => (
           <Link className="hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-150 ease-in-out" to="#">Siqi Li</Link><sup>2</sup>, &nbsp;
           <Link className="hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-150 ease-in-out" to="#">Xiaoyu Xiao</Link><sup>3</sup>, &nbsp;
           <Link className="hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-150 ease-in-out" to="#">Yixian Ding</Link><sup>4</sup>
-          
+
         </p>
-          
+
         <p className="font-bold text-sm font-roboto text-gray-400 max-w-none dark:text-gray-300 mt-8 text-center">
           <sup>1</sup> Department of Mechanical and Aerospace Engineering, The University of Manchester <br />
           <sup>2</sup> Department of Mathematics, The University of Manchester<br />
           <sup>3</sup> Department of Electrical and Electronic Engineering, The University of Manchester <br />
           <sup>4</sup> School of Mechanical, Electronic and Control Engineering, Beijing Jiaotong University <br />
-          
-          </p>
+
+        </p>
 
         <div className="mt-12 flex-1 justify-items-center">
           <div className="flex justify-center">
@@ -52,18 +53,18 @@ const TppPage = () => (
                 dark:hover:bg-slate-200 dark:focus:ring-slate-200" to="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4973757" data-tooltip-target="tooltip-default" type="button">Preprint<sup>*</sup></Link>
 
             <div id="tooltip-default" role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                Tooltip content
-                <div class="tooltip-arrow" data-popper-arrow></div>
+              Tooltip content
+              <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
 
           </div>
           <div className="flex justify-center mt-4">
             <p className="text-gray-400 dark:text-gray-600 text-sm">*: The final results is based on the paper published on Mechanical Systems and Signal Processing.</p>
           </div>
-          
+
         </div>
       </div>
-        
+
     </section>
 
     <section className="bg-gray-50 dark:bg-slate-800">
@@ -73,12 +74,13 @@ const TppPage = () => (
           <p className="text-xl mt-8 font-normal text-slate-500 dark:text-gray-400 max-w-none font-inter">We will make a page allowing you to interactly familiarise yourself with our contribution to the knowledge.</p>
           <p className="text-xl mt-2 font-normal text-slate-500 dark:text-gray-400 max-w-none font-inter">The page will be available soon.</p>
         </div>
-        <div className="lg:shrink-0" > 
+        <div className="lg:shrink-0" >
 
         </div>
-      
+
       </div>
     </section>
+    <HarmonicComponentAnalysis />
     {/* <section className="bg-gray-50 dark:bg-slate-800">
       <div className="w-full mx-auto max-w-screen-xl px-6 py-16 lg:flex">
         <div className="flex-1 p-6">
@@ -104,7 +106,7 @@ const TppPage = () => (
             <Link to="https://www.csc.edu.cn/" className="hover:text-blue-700
             transition-all duration-150 ease-in-out hover:underline font-bold
             dark:hover:text-blue-200 ">China scholarship council</Link>.
-          </p>  
+          </p>
         </div>
 
         <div className="lg:shrink-0" >
@@ -113,10 +115,10 @@ const TppPage = () => (
             h-48 md:h-36
             border-r-8 rounded-2xl dark:shadow-xl dark:bg-slate-200" src={CSCLogo} alt="Logo of China scholarship council" />
           </div>
-          
+
         </div>
 
-        
+
       </div>
 
     </section>
@@ -125,22 +127,56 @@ const TppPage = () => (
       <div className="w-full mx-auto max-w-screen-xl px-6 py-8">
         <p className="text-2xl mt-2 font-normal text-gray-500 dark:text-gray-200 max-w-none  font-roboto">
           If you have any questions or suggestions, please feel free to&nbsp;
-           <Link to="/contact" className="text-blue-500 dark:text-blue-200 hover:text-blue-700
+          <Link to="/contact" className="text-blue-500 dark:text-blue-200 hover:text-blue-700
            transition-all duration-150 ease-in-out underline
            dark:hover:text-blue-200">contact us</Link>.
-        </p>  
+        </p>
       </div>
 
     </section>
 
+
   </Layout>
 )
+
+export function HarmonicComponentAnalysis() {
+  const [spindleRate, setSpindleRate] = useState(4000)
+  const [signalDuration, setSignalDuration] = useState(0.5)
+  const [signalFrequency, setSignalFrequency] = useState(6000)
+  return (
+    <div>
+      <section className="bg-gray-50 dark:bg-slate-800">
+        <form>
+          <div className="w-full mx-auto max-w-screen-xl px-6 py-16 lg:flex">
+            <div className="flex-1 p-6">
+              <div>
+                <label for="first_name" class="block mb-2 text-sm font-medium text-cyan-700 dark:text-cyan-200">Input the spindle rate (RPM)</label>
+                <input type="number" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value={spindleRate} onChange={(e) => setSpindleRate(e.target.value)} required />
+              </div>
+
+            </div>
+            <div className="lg:shrink-0" >
+              <div className="p-6 flex-1 justify-item-center">
+                <div id="signal-chart" className="max-w-full flex justify-center border-r-8 rounded-2xl dark:shadow-xl dark:bg-slate-200"></div>
+              </div>
+
+            </div>
+
+          </div>
+        </form>
+
+      </section>
+    </div>
+
+  )
+
+}
 
 /**
  * Head export to define metadata for the page
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="In-process tool incidence identification based on temporal pyramid pooling and convolutional neural network" />
+export const Head = () => <Seo title="Minimum Sufficient Signal Condition of Identifying Process Incidence in Stacked Drilling Through Deep Learning" />
 
 export default TppPage

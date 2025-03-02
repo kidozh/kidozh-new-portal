@@ -7,7 +7,7 @@
 // You can delete this file if you're not using it
 
 import './src/styles/global.css'
-
+import 'flowbite'
 
 export const onRouteUpdate = ({ location, prevLocation }) => {
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
