@@ -42,8 +42,8 @@ const ProjectCardDark = ({ title, description, link, keywords, image }) => (
 
 const ProjectCard = ({ title, description, link, keywords }) => (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden
-        dark:hover:bg-gradient-to-r dark:hover:from-cyan-500 dark:hover:to-blue-500
-        hover:bg-gradient-to-r hover:from-orange-200 hover:to-red-200
+        dark:hover:bg-linear-to-r dark:hover:from-cyan-500 dark:hover:to-blue-500
+        hover:bg-linear-to-r hover:from-orange-200 hover:to-red-200
         hover:scale-105
         group hover:transition-all duration-500 ease-in-out">
         <div className="px-8 py-12">
@@ -61,10 +61,10 @@ const ProjectCard = ({ title, description, link, keywords }) => (
             <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">{title}</h2>
             <hr className="h-1 my-8 w-16 mt-2 mb-6 bg-orange-500 border-orange-500
              border-2 dark:bg-indigo-500 dark:border-indigo-500
-              group-hover:dark:bg-slate-100 group-hover:dark:border-slate-100
+              dark:group-hover:bg-slate-100 dark:group-hover:border-slate-100
                group-hover:bg-red-600 group-hover:border-red-600" />
 
-            <p className="mt-4 font-montserrat text-sm font-light text-gray-700 dark:text-gray-400 group-hover:dark:text-gray-200">{keywords}</p>
+            <p className="mt-4 font-montserrat text-sm font-light text-gray-700 dark:text-gray-400 dark:group-hover:text-gray-200">{keywords}</p>
         </div>
     </div>
 );
@@ -73,7 +73,7 @@ const ProjectPage = () => (
     <Layout>
         <div className="bg-indigo-200 dark:bg-indigo-400 p-4">
             <section className="bg-gray-50 dark:bg-slate-600 bg-fine-wave-bg-light dark:bg-fine-wave-bg-dark rounded-3xl">
-                <div className="w-full mx-auto max-w-screen-xl px-6 py-16">
+                <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16">
                     <h1 className="text-4xl font-bold text-gray-800 dark:text-white ">
                         PhD academic projects in <span className="bg-purple-200 dark:bg-purple-600 font-montserrat">The University of Manchester</span></h1>
                     <p className="text-normal font-bold text-gray-500 dark:text-gray-200 mt-4 font-normal">Under the supervision of Dr Robert Heinemann and Otto Jan Bakker.</p>
@@ -115,7 +115,7 @@ const ProjectPage = () => (
                     </div>
                 </div>
 
-                <div className="w-full mx-auto max-w-screen-xl px-6 py-16">
+                <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16">
                     <h1 className="text-4xl font-bold text-gray-800 dark:text-white ">
                         MEng academic projects in <span className="bg-blue-200 dark:bg-blue-600 font-montserrat">Northwestern Polytechnical University</span></h1>
                     <p className="text-normal font-bold text-gray-500 dark:text-gray-200 mt-4 font-normal">Under the supervision of Prof. Rong Mo and Huibin Sun.</p>
@@ -174,7 +174,7 @@ const ProjectPage = () => (
                     </div>
                 </div>
 
-                <div className="w-full mx-auto max-w-screen-xl px-6 py-16">
+                <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16">
                     <h1 className="text-4xl font-bold text-gray-800 dark:text-white font-montserrat">Android & Flutter open source projects</h1>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">

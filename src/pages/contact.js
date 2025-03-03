@@ -7,7 +7,7 @@ import { GoFileMedia, GoLocation } from "react-icons/go";
 const IndexPage = () => (
     <Layout>
         <section className="bg-gray-50 dark:bg-slate-600">
-            <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
+            <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-32">
                 
                 <h1 class="text-6xl text-center font-bold text-gray-800 dark:text-white font-montserrat">
                     <GoFileMedia className="inline mr-8" />
@@ -24,7 +24,7 @@ const IndexPage = () => (
             </div>
         </section>
         <section className="bg-gray-100 dark:bg-gray-900">
-            <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
+            <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-32">
                 <h1 class="text-6xl text-center font-bold text-gray-800 dark:text-white font-montserrat">
                     <GoLocation className="inline mr-8" />
                     Location
@@ -38,7 +38,7 @@ const IndexPage = () => (
             </div>
         </section>
         <section className="bg-blue-100 dark:bg-blue-900">
-            <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
+            <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-32">
                 <h1 className="text-4xl font-bold text-blue-800 dark:text-blue-100 font-montserrat">These email addresses are no longer being monitored:</h1>
                 <ul className="list-none p-6 font-roboto list-disc transition-all duration-700">
                     <li className=" text-gray-600 dark:text-gray-300 mt-6">kidozh[AT]mail.nwpu.edu.cn</li>

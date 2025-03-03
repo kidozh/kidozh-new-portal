@@ -14,6 +14,9 @@ module.exports = {
     author: `@kidozh`,
     siteUrl: `https://kidozh.com/`,
   },
+  flags: {
+    DEV_SSR: false,
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

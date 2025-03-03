@@ -11,7 +11,7 @@ const UpdatePostPage = ({data}) => {
         <Layout>
 
             <div className="bg-indigo-200 dark:bg-indigo-400 p-8 bg-fine-wave-bg-light dark:bg-fine-wave-bg-dark">
-                <div className="bg-gray-50 dark:bg-slate-800 rounded-xl max-w-screen-xl mx-auto">
+                <div className="bg-gray-50 dark:bg-slate-800 rounded-xl max-w-(--breakpoint-xl) mx-auto">
                     <section className="mx-auto px-12 pt-32">
                         <h4 className="text-md font-bold font-montserrat text-gray-500 dark:text-gray-400 ">
                             {post.frontmatter.date}
@@ -22,9 +22,9 @@ const UpdatePostPage = ({data}) => {
                         
                         <hr className="my-4 mt-4 mb-8 h-2 border-4 w-32 border-orange-600 dark:border-indigo-400" />
                         <article className="prose dark:prose-invert md:prose-xl 
-                            prose-img:rounded-xl prose-a:text-orange-600 prose-a:hover:text-orange-800
+                            prose-img:rounded-xl prose-a:text-orange-600 hover:prose-a:text-orange-800
                                 transition-all duration-500 ease-in-out prose-a:no-underline
-                            dark:prose-a:text-orange-300 dark:prose-a:hover:text-orange-400
+                            dark:prose-a:text-orange-300 dark:hover:prose-a:text-orange-400
                         
                         lg:prose-2xl max-w-none prose-stone" >
                             <div className="mt-8" dangerouslySetInnerHTML={{ __html: post.html }}></div>
@@ -33,7 +33,7 @@ const UpdatePostPage = ({data}) => {
 
                     </section>
 
-                    <section className="w-full mx-auto max-w-screen-xl px-12 pb-16">
+                    <section className="w-full mx-auto max-w-(--breakpoint-xl) px-12 pb-16">
                         <div className="mt-16">
                             <p className="text-gray-800 dark:text-gray-100 font-montserrat">
                                 <Link to="/update" className="text-orange-600 hover:text-orange-700 dark:text-orange-400 dark:hover:text-orange-500">← Back to updates</Link>

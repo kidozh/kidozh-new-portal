@@ -12,14 +12,14 @@ import CSCLogo from "../../images/project/china-scholarship-logo.jpg"
 const TppPage = () => (
   <Layout>
     <section className="bg-blue-800 dark:bg-green-600">
-      <div className="w-full mx-auto max-w-screen-xl px-6 py-3">
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-3">
         <h4 class="text-xl font-medium text-blue-50 dark:text-green-100 text-center">
           <Link to="/project/tpp-zh">查看中文界面</Link>
           </h4>
       </div>
     </section>
     <section className="bg-gray-50 dark:bg-slate-600">
-      <div className="w-full mx-auto max-w-screen-xl px-6 py-32">
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-32">
         <h4 class="text-2xl font-medium text-cyan-700 dark:text-green-100 text-center">Remove input barrier in the way of deep learning in signal processing</h4>
         <h1 className="text-7xl md:text-8xl mt-2 text-center font-bold text-slate-900 dark:text-white">Temporal Pyramid Pooling</h1>
         <p className="mt-16 mb-0 font-bold text-gray-400 max-w-none dark:text-gray-300 text-center">
@@ -32,7 +32,7 @@ const TppPage = () => (
         <div className="mt-12 flex-1 justify-items-center">
           <div className="flex justify-center">
             <Link className="text-white bg-blue-700 shrink-0
-            hover:bg-blue-800 focus:outline-none 
+            hover:bg-blue-800 focus:outline-hidden 
             focus:ring-4 focus:ring-blue-300 
             font-medium rounded-full text-normal px-5 py-2.5 
             text-center mr-2 mb-2 dark:bg-blue-600
@@ -48,7 +48,7 @@ const TppPage = () => (
         
     </section>
     <section className="bg-gray-50 dark:bg-slate-800">
-      <div className="w-full mx-auto max-w-screen-xl px-6 py-16 lg:flex">
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16 lg:flex">
         {/* should place a TPP model here */}
         <div className="flex-1 p-6">
           <h1 className="text-2xl mt-2 font-bold text-cyan-700 dark:text-cyan-200">Divide and pool</h1>
@@ -74,7 +74,7 @@ const TppPage = () => (
       </div>
     </section>
     <section className="bg-gray-50 dark:bg-slate-800">
-      <div className="w-full mx-auto max-w-screen-xl px-6 pt-16">
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 pt-16">
         <div className="flex-1 p-6">
           <h1 className="text-2xl mt-2 font-bold text-cyan-700 dark:text-cyan-200">A perfect match</h1>
           <p className="text-xl mt-2 font-normal text-slate-500 dark:text-gray-400 max-w-none">
@@ -91,7 +91,7 @@ const TppPage = () => (
 
 
       </div>
-      <div className="w-full mx-auto max-w-screen-xl px-6 pb-16" >
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 pb-16" >
           <div className="p-6 flex-1 justify-item-center">
             <img className="max-w-full flex justify-center border-r-8 p-6 rounded-2xl 
             dark:shadow-xl dark:bg-slate-200" src={TppCNNImage} alt="TPP model" />
@@ -100,11 +100,11 @@ const TppPage = () => (
         </div>
     </section>
     <section className="bg-gray-50 dark:bg-slate-800">
-      <div className="w-full mx-auto max-w-screen-xl px-6 py-16 grid md:grid-cols-4">
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16 grid md:grid-cols-4">
         <div className="flex justify-center">
           <div className="p-6 mb-16 md:mb-0 bg-slate-700
-          bg-gradient-to-r from-slate-700 to-slate-900
-          dark:bg-gradient-to-r dark:from-slate-500 dark:to-slate-600
+          bg-linear-to-r from-slate-700 to-slate-900
+          dark:bg-linear-to-r dark:from-slate-500 dark:to-slate-600
           align-middle 
           w-32 h-32 ">
             <h1 className="text-2xl mt-2 font-bold text-center align-middle text-gray-100 ">TPP<br/>CNN</h1>
@@ -134,7 +134,7 @@ const TppPage = () => (
         </div>
       </div>
       
-      <div className="w-full mx-auto max-w-screen-xl px-6 py-8">
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-8">
         <p className="text-xl mt-2 font-normal text-slate-500 dark:text-gray-400 max-w-none">
           <b className="font-bold text-slate-700 dark:text-gray-100">One for all.</b>&nbsp;
             The proposed method allows deep learning model to process signal in any length, which could archieve
@@ -162,7 +162,7 @@ const TppPage = () => (
     </section>
 
     <section className="bg-gray-100 dark:bg-slate-700">
-      <div className="w-full mx-auto max-w-screen-xl px-6 py-16">
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16">
         <p className="text-2xl mt-2 text-gray-500 dark:text-gray-300 max-w-none">
           Given that the proposed method could be applied to any signal processing task, high-accuracy and
           immediate monitoring by deep learning approach could be achieved in a wide range of applications.
@@ -173,7 +173,7 @@ const TppPage = () => (
     </section>
 
     <section className="bg-slate-200 dark:bg-slate-600"> 
-      <div className="w-full mx-auto max-w-screen-xl px-6 py-16 lg:flex">
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16 lg:flex">
       <div className="lg:shrink-0" >
           <div className="flex-1 justify-item-center">
             <img className="max-w-full flex justify-center border-r-8 rounded-2xl dark:shadow-xl dark:bg-slate-200" src={CIRPICMELogo} alt="CIRP ICME Logo" />
@@ -198,7 +198,7 @@ const TppPage = () => (
     </section>
 
     <section className="bg-blue-100 dark:bg-blue-900">
-      <div className="w-full mx-auto max-w-screen-xl px-6 py-8 lg:flex align-middle">
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-8 lg:flex align-middle">
         <div className="flex-1 justify-center align-middle">
           <p className="text-4xl p-8 font-normal text-blue-900 dark:text-blue-200 max-w-none">
             Jiduo would like to acknowledge the continuing contribution to this research by&nbsp;
@@ -223,7 +223,7 @@ const TppPage = () => (
     </section>
 
     <section className="bg-gray-100 dark:bg-gray-700">
-      <div className="w-full mx-auto max-w-screen-xl px-6 py-8">
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-8">
         <p className="text-2xl mt-2 font-normal text-gray-500 dark:text-gray-200 max-w-none">
           If you have any questions or suggestions, please feel free to&nbsp;
            <Link to="/contact" className="text-blue-500 dark:text-blue-200 hover:text-blue-700

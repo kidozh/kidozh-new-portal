@@ -7,8 +7,8 @@ import { Link } from "gatsby"
 
 const BlogCard = ({ title, author, date, excerpt, link }) => (
   <div to={link} className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden
-      dark:hover:bg-gradient-to-r dark:hover:from-cyan-500 dark:hover:to-blue-500
-      hover:bg-gradient-to-r hover:from-orange-200 hover:to-red-200
+      dark:hover:bg-linear-to-r dark:hover:from-cyan-500 dark:hover:to-blue-500
+      hover:bg-linear-to-r hover:from-orange-200 hover:to-red-200
       hover:scale-105 m-4
       group hover:transition-all duration-500 ease-in-out">
         <Link to={link}>
@@ -16,13 +16,13 @@ const BlogCard = ({ title, author, date, excerpt, link }) => (
             <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">{title}</h2>
             <hr className="h-1 my-8 w-32 mt-2 mb-4 bg-orange-500 border-orange-500
             border-2 dark:bg-indigo-500 dark:border-indigo-500
-             group-hover:dark:bg-slate-100 group-hover:dark:border-slate-100
+             dark:group-hover:bg-slate-100 dark:group-hover:border-slate-100
               group-hover:bg-red-600 group-hover:border-red-600" />
             <p className="mt-4 font-light text-normal text-gray-700
             dark:text-gray-200 border-b-orange-700">{excerpt}</p>
 
             <p className="font-montserrat text-sm font-light mt-8
-            text-gray-700 dark:text-gray-400 group-hover:dark:text-gray-200">{date}</p>
+            text-gray-700 dark:text-gray-400 dark:group-hover:text-gray-200">{date}</p>
           </div>
         </Link>
       
@@ -35,13 +35,13 @@ const UpdatePage = ({ data }) => {
     return (
         <Layout>
             <section className="bg-gray-50 dark:bg-slate-600">
-                <div className="w-full mx-auto max-w-screen-xl px-6 py-16">
+                <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16">
                     <h1 class="text-6xl text-center font-bold text-gray-800 dark:text-white font-montserrat">Update</h1>
                 </div>
             </section>
 
             <section className="bg-gray-50 dark:bg-slate-600">
-                <div className="w-full mx-auto max-w-screen-xl px-6 py-16 grid grid-cols-1 md:grid-cols-2">
+                <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16 grid grid-cols-1 md:grid-cols-2">
                     {posts.map(post => (
                         <BlogCard 
                           title={post.frontmatter.title} 
