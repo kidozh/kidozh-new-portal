@@ -14,8 +14,10 @@ module.exports = {
     extend: {
       fontFamily: {
         'montserrat' :['"Montserrat"', 'sans-serif'],
+        'mont' :['"Montserrat"', 'sans-serif'],
         'roboto': ['"Roboto"', 'sans-serif'],
-        'inter': ['"Inter"', ...defaultTheme.fontFamily.sans]
+        'inter': ['"Inter"', ...defaultTheme.fontFamily.sans],
+        'mono': ['"PT Mono"', ...defaultTheme.fontFamily.mono],
         //sans: ['Microsoft YaHei', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage:{
