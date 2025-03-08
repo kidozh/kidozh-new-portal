@@ -58,7 +58,7 @@ const TppPage = () => (
                 dark:hover:bg-slate-200 dark:focus:ring-slate-200" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4973757" data-tooltip-target="tooltip-default" type="button">Preprint<sup>*</sup></a>
 
             <div id="tooltip-default" role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-2xs opacity-0 tooltip dark:bg-gray-700">
-              Tooltip content
+              Preprint version of the paper is available on SSRN. The final version is published on MSSP.
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
 
