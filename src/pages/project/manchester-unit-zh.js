@@ -798,7 +798,7 @@ class HarmonicComponentAnalysis extends React.Component {
 
               <p className="text-xl mt-4 font-regular font-inter text-slate-500 dark:text-gray-400"><b className="font-heavy font-roboto text-slate-700 dark:text-gray-200">从时域上来说</b> 为了保证最低频频率特征得以保留，采样时长必须超过({(60 / this.state.spindleRate).toFixed(3)}秒，这也是{(this.state.spindleRate / 60).toFixed()}赫兹)的波长.</p>
 
-              <p className="text-xl mt-4 font-regular font-inter text-slate-500 dark:text-gray-400"><b className="font-heavy font-roboto text-slate-700 dark:text-gray-200">从频域上来说</b> 当采样时长低于<b className="text-slate-700 dark:text-gray-200">{(60 / this.state.spindleRate * 2).toFixed(3)}</b>秒，即 (对应{(this.state.spindleRate / 60).toFixed()}赫兹), 根据瑞利盘局，在频谱图中，两个相邻谐波频率的尖峰并不能的以区分。就算是这种情况下，由于基频上的幅度仍然远高于第二频率，就算中间差了一个点，这种尖峰的信息仍然有可能无法表达，这也会引发信号的失真和信息的丢失。</p>
+              <p className="text-xl mt-4 font-regular font-inter text-slate-500 dark:text-gray-400"><b className="font-heavy font-roboto text-slate-700 dark:text-gray-200">从频域上来说</b> 当采样时长低于<b className="text-slate-700 dark:text-gray-200">{(60 / this.state.spindleRate * 2).toFixed(3)}</b>秒，即 (对应{(this.state.spindleRate / 60).toFixed()}赫兹), 根据瑞利判据，在频谱图中，两个相邻谐波频率的尖峰并不能的以区分。就算是这种情况下，由于基频上的幅度仍然远高于第二频率，就算中间差了一个点，这种尖峰的信息仍然有可能无法表达，这也会引发信号的失真和信息的丢失。</p>
             </div>
             <div className="grid md:grid-cols-3">
               <div className="p-6 flex-1 justify-item-center min-h-96">
