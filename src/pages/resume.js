@@ -205,6 +205,9 @@ const CVPage = () => (
                                 <li class="py-2">
                                     <strong class="underline">Zhang, J.</strong>, Heinemann, R, Bakker OJ. (2025). Process incidence monitoring in material identification during drilling stacked structures using support vector machine. The International Journal of Advanced Manufacturing Technology, 136(2), 827-840. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded-sm break-keep">JCR Q2</span>
                                 </li>
+                                <li class="py-2">
+                                    <strong class="underline">Zhang, J.</strong>, Heinemann, R, Bakker OJ. (2025). Knot-TPP: A Unified Deep Learning Model for Process Incidence and Tool Wear Monitoring in Stacked Drilling. Journal of Manufacturing and Materials Processing. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded-sm break-keep">JCR Q2</span>
+                                </li>
 
                                 <li class="py-2">
                                     Sun, Huibin, <strong class="underline">Jiduo Zhang</strong>, Rong Mo, and Xianzhi Zhang. "In-process tool condition forecasting based on a deep learning method." <i>Robotics and Computer-Integrated Manufacturing</i> 64 (2020): 101924. <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded-sm break-keep">JCR Q1 TOP</span> <span class="text-sm p-1 m-2 bg-blue-600 text-white rounded-sm break-keep">中科院一区 TOP</span>
