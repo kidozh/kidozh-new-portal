@@ -2,20 +2,20 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { GoFileMedia, GoLocation, GoFile, GoFileCode } from "react-icons/go";
+import { GoFile } from "react-icons/go";
 import Portrait from "../../static/images/portrait.jpeg"
 import { Link } from "gatsby";
 
 const CVPage = () => (
     <Layout>
         <a href="/files/jiduo_cv.pdf" className="">
-            <div className="flex items-center justify-center h-16 bg-blue-200 dark:bg-slate-900 text-slate-900 dark:text-gray-200 transition-all hover:bg-blue-300 dark:hover:bg-slate-700 hover:scale-105">
-                <GoFile className="text-2xl mr-2" />
-                <span className="text-lg font-semibold">View in PDF (Full content)</span>
+            <div className="flex items-center justify-center h-16 bg-blue-200 dark:bg-green-900 text-slate-900 dark:text-gray-200 transition-all hover:bg-blue-300 dark:hover:bg-green-700 group hover:h-18 ease-in-out">
+                <GoFile className="text-2xl group-hover:text-3xl mr-2 group-hover:mr-4 ease-in-out" />
+                <span className="text-lg group-hover:text-xl font-semibold ">View in PDF (Full content)</span>
             </div>
         </a>
-        <section className="bg-gray-50 dark:bg-slate-800 text-slate-900 dark:text-gray-200">
-            <div className="mx-auto max-w-(--breakpoint-xl) px-6 py-32 rounded-xs">
+        <section className="bg-gray-100 dark:bg-slate-800 text-slate-900 dark:text-gray-200">
+            <div className="mx-auto max-w-(--breakpoint-xl) px-6 py-16 rounded-xs">
                 {/* Header profile */}
                 <div className="w-full">
                     <div class="grid md:grid-cols-2 ">

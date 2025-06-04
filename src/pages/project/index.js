@@ -11,7 +11,7 @@ import DnaSignalForm from "../../images/project/gene-6527964.jpg"
 import GalaxyImage from "../../images/project/galaxy-2357413_1920.jpg"
 
 const ProjectCardDark = ({ title, description, link, keywords, image }) => (
-    <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden
+    <Link to={link} className="bg-white dark:bg-gray-800 shadow-lg rounded-xl overflow-hidden
      group hover:transition-all duration-500 ease-in-out hover:scale-105"
         style={{
             background: `linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2) ), url(${image})`,
@@ -37,11 +37,11 @@ const ProjectCardDark = ({ title, description, link, keywords, image }) => (
 
             <p className="mt-4 font-montserrat text-sm font-light text-gray-300">{keywords}</p>
         </div>
-    </div>
+    </Link>
 );
 
 const ProjectCard = ({ title, description, link, keywords }) => (
-    <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden
+    <Link to={link} className="bg-white dark:bg-gray-800 shadow-lg rounded-xl overflow-hidden
         dark:hover:bg-linear-to-r dark:hover:from-cyan-500 dark:hover:to-blue-500
         hover:bg-linear-to-r hover:from-orange-200 hover:to-red-200
         hover:scale-105
@@ -66,7 +66,7 @@ const ProjectCard = ({ title, description, link, keywords }) => (
 
             <p className="mt-4 font-montserrat text-sm font-light text-gray-700 dark:text-gray-400 dark:group-hover:text-gray-200">{keywords}</p>
         </div>
-    </div>
+    </Link>
 );
 
 const ProjectPage = () => (
@@ -116,10 +116,10 @@ const ProjectPage = () => (
                 </div>
 
                 <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16">
-                    <h1 className="text-4xl font-bold text-gray-800 dark:text-white ">
+                    <h1 className="text-4xl font-bold text-gray-800 dark:text-white">
                         MEng academic projects in <span className="bg-blue-200 dark:bg-blue-600 font-montserrat">Northwestern Polytechnical University</span></h1>
                     <p className="text-normal font-bold text-gray-500 dark:text-gray-200 mt-4 font-normal">Under the supervision of Prof. Rong Mo and Huibin Sun.</p>
-                    <div className="flex mt-4">
+                    <div className="flex max-w-(--breakpoint-xl) mt-4 group hover:scale-102 transition-all">
                         <p className="flex flex-auto">
                             <a href="https://www.nwpu.edu.cn" class="hover:transition-all duration-1000 ease-in-out
                          inline-flex justify-center items-center py-1 px-1 pr-4 
