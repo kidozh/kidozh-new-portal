@@ -82,7 +82,7 @@ const TppPage = () => (
     <HarmonicComponentAnalysis />
     <ModelResponsePage />
 
-    <section className="bg-sky-100 dark:bg-orange-900">
+    <section className="bg-sky-100 dark:bg-sky-900">
       <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-8 lg:flex align-middle">
         <div className="flex-1 justify-center align-middle">
           <p className="text-4xl p-8 font-normal font-montserrat text-sky-900 dark:text-blue-200 max-w-none">

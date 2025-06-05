@@ -14,7 +14,7 @@ const BlogCard = ({ title, author, date, excerpt, link }) => (
         <Link to={link}>
           <div className="px-8 py-12">
             <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">{title}</h2>
-            <hr className="h-1 my-8 w-32 mt-2 mb-4 bg-orange-500 border-orange-500
+            <hr className="h-1 my-8 w-32 group-hover:w-full mt-2 mb-4 bg-orange-500 border-orange-500 group-hover:transition-all ease-in-out duration-800
             border-2 dark:bg-indigo-500 dark:border-indigo-500
              dark:group-hover:bg-slate-100 dark:group-hover:border-slate-100
               group-hover:bg-red-600 group-hover:border-red-600" />

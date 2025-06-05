@@ -21,10 +21,10 @@ const UpdatePostPage = ({data}) => {
                         </h1>
                         
                         <hr className="my-4 mt-4 mb-8 h-2 border-4 w-32 border-orange-600 dark:border-indigo-400" />
-                        <article className="prose dark:prose-invert md:prose-xl 
+                        <article className="prose dark:prose-invert 
                             prose-img:rounded-xl prose-a:text-orange-600 hover:prose-a:text-orange-800
                                 transition-all duration-500 ease-in-out prose-a:no-underline
-                            dark:prose-a:text-orange-300 dark:hover:prose-a:text-orange-400
+                            dark:prose-a:text-indigo-300 dark:hover:prose-a:text-indigo-400
                         
                         lg:prose-2xl max-w-none prose-stone" >
                             <div className="mt-8" dangerouslySetInnerHTML={{ __html: post.html }}></div>
@@ -36,7 +36,7 @@ const UpdatePostPage = ({data}) => {
                     <section className="w-full mx-auto max-w-(--breakpoint-xl) px-12 pb-16">
                         <div className="mt-16">
                             <p className="text-gray-800 dark:text-gray-100 font-montserrat">
-                                <Link to="/update" className="text-orange-600 hover:text-orange-700 dark:text-orange-400 dark:hover:text-orange-500">← Back to updates</Link>
+                                <Link to="/update" className="text-orange-600 hover:text-orange-700 dark:text-indigo-400 dark:hover:text-indigo-500">← Back to updates</Link>
                             </p>
                         </div>
                     </section>
