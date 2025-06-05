@@ -4,8 +4,6 @@ import * as React from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import { Link } from "gatsby"
-import TppImage from "../../images/project/tpp/tpp.svg"
-import TppCNNImage from "../../images/project/tpp/tpp_cnn.svg"
 import CIRPICMELogo from "../../images/project/tpp/cirp-icme-logo.webp"
 import CSCLogo from "../../images/project/china-scholarship-logo.jpg"
 
