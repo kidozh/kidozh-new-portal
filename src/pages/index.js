@@ -43,8 +43,12 @@ const IndexPage = ({data}) => {
         <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16">
           <h1 className="text-4xl font-bold font-montserrat text-gray-800 dark:text-white">📢 Latest <span className="bg-orange-300 dark:bg-orange-600 text-underline hover:bg-orange-600 hover:text-white dark:hover:bg-orange-800 hover:transition-all duration-500 ease-in-out">update</span></h1>
             {
-            posts.map(post => (
-              <p key={post.excerpt} className="text-light text-gray-800 dark:text-gray-200 break-normal mt-4 font-normal">
+            posts.map((post, index) => (
+              <p key={post.excerpt} className="text-light p-4 text-gray-800 dark:text-gray-200 break-normal mt-4 font-normal hover:scale-101 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg
+               hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-gray-700
+              transition-all duration-500 ease-in-out">
+                {index == 0 && <span className="text-gray-800 dark:text-gray-200 font-bold mr-2 pr-4 pl-4 pt-1 pb-1 text-sm bg-orange-300 rounded-lg font-mono dark:bg-orange-500
+                 dark:bg-orange-600">Newest</span>}
                 <span className="text-gray-400 dark:text-gray-500 mr-3 font-extrabold">{post.frontmatter.date}</span>
                 <Link to={post.fields.slug}
                  className="text-gray-700 dark:text-gray-300 font-bold
@@ -58,13 +62,6 @@ const IndexPage = ({data}) => {
           
         </div>
       </section>
-      <section className="bg-blue-100 dark:bg-blue-800">
-        <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-32">
-          <h1 className="text-4xl font-bold text-blue-800 dark:text-blue-400">Looking for something else?</h1>
-          <p className="text-normal font-bold text-gray-500 dark:text-gray-200 mt-4">
-            There are a few changes in the pages due to site maintenance which causes loss to serveral contents of this site.</p>
-        </div>
-      </section>
   
     </Layout>
   )
@@ -72,7 +69,7 @@ const IndexPage = ({data}) => {
 
 export const pageQuery = graphql`
   query MyQuery {
-    update:allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1) {
+    update:allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 3) {
       posts:nodes {
         excerpt
         frontmatter {

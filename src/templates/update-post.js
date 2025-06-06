@@ -10,8 +10,8 @@ const UpdatePostPage = ({data}) => {
     return (
         <Layout>
 
-            <div className="bg-indigo-200 dark:bg-indigo-400 p-8 bg-fine-wave-bg-light dark:bg-fine-wave-bg-dark">
-                <div className="bg-gray-50 dark:bg-slate-800 rounded-xl max-w-(--breakpoint-xl) mx-auto">
+            <div className="bg-indigo-200 dark:bg-indigo-400 p-8 bg-fine-wave-bg-light dark:bg-fine-wave-bg-dark ">
+                <div className="bg-gray-50 dark:bg-slate-800 rounded-xl max-w-(--breakpoint-xl) mx-auto group hover:transition-all duration-500 ease-in-out hover:scale-101">
                     <section className="mx-auto px-12 pt-32">
                         <h4 className="text-md font-bold font-montserrat text-gray-500 dark:text-gray-400 ">
                             {post.frontmatter.date}
@@ -20,16 +20,15 @@ const UpdatePostPage = ({data}) => {
                             {post.frontmatter.title}
                         </h1>
                         
-                        <hr className="my-4 mt-4 mb-8 h-2 border-4 w-32 border-orange-600 dark:border-indigo-400" />
+                        <hr className="my-4 mt-4 mb-8 h-2 border-4 w-32 border-orange-600 dark:border-indigo-400 group-hover:w-full transition-all duration-1000 ease-in-out" />
                         <article className="prose dark:prose-invert 
                             prose-img:rounded-xl prose-a:text-orange-600 hover:prose-a:text-orange-800
                                 transition-all duration-500 ease-in-out prose-a:no-underline
                             dark:prose-a:text-indigo-300 dark:hover:prose-a:text-indigo-400
                         
-                        lg:prose-2xl max-w-none prose-stone" >
+                        lg:prose-xl max-w-none prose-stone" >
                             <div className="mt-8" dangerouslySetInnerHTML={{ __html: post.html }}></div>
                         </article>
-                        
 
                     </section>
 
