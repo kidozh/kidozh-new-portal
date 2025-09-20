@@ -3,7 +3,7 @@ import * as React from "react"
 
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import TppImage from "../../images/project/tpp/tpp.svg"
 import TppCNNImage from "../../images/project/tpp/tpp_cnn.svg"
 import CIRPICMELogo from "../../images/project/tpp/cirp-icme-logo.webp"
@@ -245,3 +245,17 @@ const TppPage = () => (
 export const Head = () => <Seo title="In-process tool incidence identification based on temporal pyramid pooling and convolutional neural network" />
 
 export default TppPage
+
+export const query = graphql`
+  query TppPageQuery($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`

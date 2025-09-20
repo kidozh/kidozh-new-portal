@@ -3,9 +3,11 @@ import { graphql } from 'gatsby'
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const UpdatePostPage = ({data}) => {
     const post = data.markdownRemark;
+    const { t } = useTranslation()
 
     return (
         <Layout>
@@ -35,7 +37,7 @@ const UpdatePostPage = ({data}) => {
                     <section className="w-full mx-auto max-w-(--breakpoint-xl) px-12 pb-16">
                         <div className="mt-16">
                             <p className="text-gray-800 dark:text-gray-100 font-montserrat">
-                                <Link to="/update" className="text-orange-600 hover:text-orange-700 dark:text-indigo-400 dark:hover:text-indigo-500">← Back to updates</Link>
+                                <Link to="/update" className="text-orange-600 hover:text-orange-700 dark:text-indigo-400 dark:hover:text-indigo-500">{t('updatePost.backToUpdates')}</Link>
                             </p>
                         </div>
                     </section>
@@ -51,15 +53,24 @@ const UpdatePostPage = ({data}) => {
 }
 
 export const query = graphql`
-  query BlogQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-        date(formatString: "YYYY-MM-DD")
-      }
+    query BlogQuery($slug: String!, $language: String!) {
+        markdownRemark(fields: { slug: { eq: $slug } }) {
+            html
+            frontmatter {
+                title
+                date(formatString: "YYYY-MM-DD")
+            }
+        }
+        locales: allLocale(filter: {language: {eq: $language}}) {
+            edges {
+                node {
+                    ns
+                    data
+                    language
+                }
+            }
+        }
     }
-  }
 `
 
 /**

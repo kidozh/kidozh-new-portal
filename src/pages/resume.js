@@ -2,16 +2,21 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { graphql } from "gatsby"
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { GoFile } from "react-icons/go";
 import Portrait from "../../static/images/portrait.jpeg"
 import { Link } from "gatsby";
 
-const CVPage = () => (
+const CVPage = () => {
+    const { t } = useTranslation()
+
+    return (
     <Layout>
         <a href="/files/jiduo_cv.pdf" className="">
             <div className="flex items-center justify-center h-16 bg-blue-200 dark:bg-green-900 text-slate-900 dark:text-gray-200 transition-all hover:bg-blue-300 dark:hover:bg-green-700 group hover:h-18 ease-in-out">
                 <GoFile className="text-2xl group-hover:text-3xl mr-2 group-hover:mr-4 ease-in-out" />
-                <span className="text-lg group-hover:text-xl font-semibold ">View in PDF (Full content)</span>
+                <span className="text-lg group-hover:text-xl font-semibold ">{t('resume.viewPdf')}</span>
             </div>
         </a>
         <section className="bg-gray-100 dark:bg-slate-800 text-slate-900 dark:text-gray-200">
@@ -25,8 +30,8 @@ const CVPage = () => (
                             </div>
                         </div>
                         <div class="place-self-end grid justify-items-end">
-                            <h1 class="text-7xl font-extrabold font-montserrat">Jiduo Zhang</h1>
-                            <p class="text-xl mt-5 font-roboto">PhD student in The University of Manchester</p>
+                            <h1 class="text-7xl font-extrabold font-montserrat">{t('resume.name')}</h1>
+                            <p class="text-xl mt-5 font-roboto">{t('resume.subtitle')}</p>
                         </div>
                     </div>
 
@@ -37,16 +42,15 @@ const CVPage = () => (
                 <main class="grid md:grid-cols-6 mt-16">
                     <div class="md:col-span-2 place-self-start">
 
-                        <strong class="text-xl font-medium">Contact Details</strong>
-                        <ul class="mt-2 mb-10">
-                            <li class="px-2 mt-1"><strong class="mr-1">E-mail </strong>
-                                <a href="mailto:jiduo.zhang@manchester.ac.uk" class="block">jiduo.zhang@manchester.ac.uk</a>
+                        <strong class="text-xl font-medium">{t('resume.contactDetails')}</strong>
+                        <ul className="mt-2 mb-10">
+                            <li className="px-2 mt-1"><strong className="mr-1">{t('resume.emailLabel')}</strong>
+                                <a href="mailto:jiduo.zhang@manchester.ac.uk" className="block">jiduo.zhang@manchester.ac.uk</a>
                             </li>
-                            <li class="px-2 mt-1"><strong class="mr-1">Location</strong><span class="block">Manchester,
-                                United Kingdom</span></li>
+                            <li className="px-2 mt-1"><strong className="mr-1">{t('resume.locationLabel')}</strong><span className="block">{t('resume.locationValue')}</span></li>
                         </ul>
 
-                        <strong class="text-xl font-medium">Frameworks</strong>
+                        <strong class="text-xl font-medium">{t('resume.frameworks')}</strong>
                         <ul class="flex w-full mt-2 mb-10">
                             <li class="px-2 mt-2 w-4/12 bg-pink-600 text-white text-center rounded-tl-lg rounded-bl-lg">Keras
                             </li>
@@ -56,46 +60,30 @@ const CVPage = () => (
 
                         </ul>
 
-                        <strong class="text-xl font-medium">Research Interests</strong>
-                        <ul class="mt-2 mb-10">
-                            <li class="px-2 mt-1">Deep learning</li>
-                            <li class="px-2 mt-1">Adaptive drilling</li>
-                            <li class="px-2 mt-1">Tool condition monitoring</li>
-                            <li class="px-2 mt-1">Machine tool</li>
+                        <strong className="text-xl font-medium">{t('resume.researchInterests')}</strong>
+                        <ul className="mt-2 mb-10">
+                            {t('resume.researchList', { returnObjects: true }).map((item, idx) => (
+                                <li key={idx} className="px-2 mt-1">{item}</li>
+                            ))}
                         </ul>
 
-                        <strong class="text-xl font-medium">Skills</strong>
-                        <ul class="mt-2 mb-10">
-                            <li class="px-2 mt-1">HTML</li>
-                            <li class="px-2 mt-1">CSS</li>
-                            <li class="px-2 mt-1">JavaScript</li>
-                            <li class="px-2 mt-1">React</li>
-                            <li class="px-2 mt-1">Node.js</li>
-                            <li class="px-2 mt-1">Python</li>
-                            <li class="px-2 mt-1">C/C++</li>
-                            <li class="px-2 mt-1">Dart</li>
-                            <li class="px-2 mt-1">Java</li>
-                            <li class="px-2 mt-1">Kotlin</li>
+                        <strong className="text-xl font-medium">{t('resume.skills')}</strong>
+                        <ul className="mt-2 mb-10">
+                            {t('resume.skillsList', { returnObjects: true }).map((item, idx) => (
+                                <li key={idx} className="px-2 mt-1">{item}</li>
+                            ))}
                         </ul>
 
                         
                     </div>
                     <div class="md:col-span-4">
                         <section>
-                            <h2 class="text-2xl pb-1 border-b font-semibold font-montserrat">About</h2>
-                            <p class="mt-4">Jiduo is currently a PhD student at The University of Manchester (UoM).
-                            Piror to this, he obtained his BSc and Msc degree in Aircraft Manufacturing at Northwestern
-                             Polytechnical University (NPU) in China. By the exchange program between NPU and RWTH Aachen,
-                            the bachelor disseration was defended in Aachen in 2017. 
-                             His research interests include deep learning, adaptive
-                             drilling, tool condition monitoring and machine tool. He is currently working on the research
-                             entitled "Preventive process condition monitoring of drilling advanced aerospace materials
-                            based on deep learning technology"
-                            </p>
+                            <h2 class="text-2xl pb-1 border-b font-semibold font-montserrat">{t('resume.about')}</h2>
+                            <p className="mt-4">{t('resume.aboutParagraph')}</p>
 
                         </section>
                         <section>
-                            <h2 class="text-2xl mt-6 pb-1 border-b font-semibold font-montserrat">Projects</h2>
+                            <h2 class="text-2xl mt-6 pb-1 border-b font-semibold font-montserrat">{t('resume.projects')}</h2>
                             {/* <ul class="mt-1">
                                 <li class="py-2">
                                     <div class="flex justify-between my-1">
@@ -191,18 +179,18 @@ const CVPage = () => (
                                 </li>
                             </ul> */}
                             <p class="mt-4">
-                                Please visit the <Link className="text-purple-500
+                                {t('resume.visitProjectsPrefix')} <Link className="text-purple-500
                                  dark:text-purple-300 hover:text-purple-900
-                                  dark:hover:text-purple-100" to="/project">projects page</Link> to get detailed information about my projects.</p>
+                                  dark:hover:text-purple-100" to="/project">{t('resume.projectsPage')}</Link> {t('resume.visitProjectsSuffix')}</p>
                         </section>
 
                         <section>
-                            <h2 class="text-2xl mt-6 pb-1 border-b font-semibold font-montserrat">Selected Publications</h2>
+                            <h2 class="text-2xl mt-6 pb-1 border-b font-semibold font-montserrat">{t('resume.selectedPublications')}</h2>
 
                             <p class="mt-2 border-l-8 border-blue-600 dark:border-green-600 pl-2 bg-blue-50 dark:bg-green-800 p-4 font-roboto">
-                                Please visit the <a className="text-blue-500
+                                {t('resume.visitPublicationsPrefix')} <a className="text-blue-500
                                  dark:text-blue-300 hover:text-blue-900
-                                  dark:hover:text-blue-100" href="https://scholar.google.com/citations?user=nudc3xUAAAAJ">Google scholar</a> to view all of my publication.</p>
+                                  dark:hover:text-blue-100" href="https://scholar.google.com/citations?user=nudc3xUAAAAJ">{t('resume.googleScholar')}</a> {t('resume.visitPublicationsSuffix')}</p>
 
                             <ul class="mt-1 list-decimal list-inside">
                                 <li class="py-2">
@@ -234,7 +222,7 @@ const CVPage = () => (
                         </section>
                         
                         <section>
-                            <h2 class="text-2xl mt-6 pb-1 border-b font-semibold font-montserrat">Education</h2>
+                            <h2 class="text-2xl mt-6 pb-1 border-b font-semibold font-montserrat">{t('resume.education')}</h2>
                             <ul class="mt-2">
                                 <li class="pt-4">
                                     <p class="flex justify-between text-sm"><strong class="text-base">The University of Manchester
@@ -261,7 +249,8 @@ const CVPage = () => (
         </section>
 
     </Layout>
-)
+    )
+}
 
 /**
  * Head export to define metadata for the page
@@ -271,3 +260,17 @@ const CVPage = () => (
 export const Head = () => <Seo title="Curriculum Vitae" />
 
 export default CVPage
+
+export const query = graphql`
+    query ResumePageQuery($language: String!) {
+        locales: allLocale(filter: {language: {eq: $language}}) {
+            edges {
+                node {
+                    ns
+                    data
+                    language
+                }
+            }
+        }
+    }
+`

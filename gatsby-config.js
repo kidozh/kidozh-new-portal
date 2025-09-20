@@ -43,10 +43,29 @@ module.exports = {
     },
     'gatsby-plugin-postcss',
     {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        languages: ["en", "zh"],
+        defaultLanguage: "en",
+        siteUrl: `https://kidozh.com/`,
+        // Path to your translation JSON files
+        localeJsonSourceName: `locales`, // name given to gatsby-source-filesystem for locales
+        // you can enable automatic redirection based on browser language
+        redirect: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
         path: `${__dirname}/content/post/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `locales`,
+        path: `${__dirname}/src/locales/`,
       },
     },
     {

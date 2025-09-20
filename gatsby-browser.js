@@ -10,6 +10,7 @@ import './src/styles/global.css'
 import 'flowbite'
 
 export const onRouteUpdate = ({ location, prevLocation }) => {
+    // set initial theme class
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
     } else {
@@ -19,20 +20,21 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-    // Change the icons inside the button based on previous settings
+    // Change the icons inside the button based on previous settings (guarded)
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        themeToggleLightIcon.classList.remove('hidden');
+        if (themeToggleLightIcon && themeToggleLightIcon.classList) themeToggleLightIcon.classList.remove('hidden');
     } else {
-        themeToggleDarkIcon.classList.remove('hidden');
+        if (themeToggleDarkIcon && themeToggleDarkIcon.classList) themeToggleDarkIcon.classList.remove('hidden');
     }
 
     var themeToggleBtn = document.getElementById('theme-toggle');
 
-    themeToggleBtn.addEventListener('click', function () {
+    if (themeToggleBtn && themeToggleBtn.addEventListener) {
+      themeToggleBtn.addEventListener('click', function () {
 
-        // toggle icons inside button
-        themeToggleDarkIcon.classList.toggle('hidden');
-        themeToggleLightIcon.classList.toggle('hidden');
+        // toggle icons inside button (guarded)
+        if (themeToggleDarkIcon && themeToggleDarkIcon.classList) themeToggleDarkIcon.classList.toggle('hidden');
+        if (themeToggleLightIcon && themeToggleLightIcon.classList) themeToggleLightIcon.classList.toggle('hidden');
 
         // if set via local storage previously
         if (localStorage.getItem('color-theme')) {
@@ -55,5 +57,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
             }
         }
 
-    });
+      });
+    }
 }

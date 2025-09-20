@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Link } from "gatsby"
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 
 const BlogCard = ({ title, author, date, excerpt, link }) => (
@@ -30,13 +31,14 @@ const BlogCard = ({ title, author, date, excerpt, link }) => (
 );
 
 const UpdatePage = ({ data }) => {
-    const {posts} = data.blog
+  const {posts} = data.blog
+  const { t } = useTranslation()
 
     return (
         <Layout>
             <section className="bg-gray-50 dark:bg-slate-600">
                 <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16">
-                    <h1 class="text-6xl text-center font-bold text-gray-800 dark:text-white font-montserrat">Update</h1>
+                    <h1 class="text-6xl text-center font-bold text-gray-800 dark:text-white font-montserrat">{t('update.title')}</h1>
                 </div>
             </section>
 
@@ -64,7 +66,7 @@ const UpdatePage = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query MyQuery {
+  query MyQuery($language: String!) {
     blog: allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
       posts: nodes {
         frontmatter {
@@ -77,6 +79,15 @@ export const pageQuery = graphql`
         id
         fields {
           slug
+        }
+      }
+    }
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
         }
       }
     }
