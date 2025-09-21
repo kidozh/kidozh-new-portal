@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import Footer from "./footer"
+// Script import removed; theme toggle is React driven in Header
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,10 +26,25 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {/* <Script src="/js/theme-switch.js" id="theme-switcher-raw" defer strategy="idle"></Script>
-      <Script id="render-theme-switcher" defer strategy="idle">{`renderThemeSwitcher();`}</Script> */}
-
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      {/* Inline critical theme-snippet: run synchronously before render to avoid flash/jank */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `(function() {
+  try {
+    var stored = localStorage.getItem('color-theme');
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (stored === 'dark' || (stored === null && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  } catch (e) {
+    /* ignore */
+  }
+})();`
+        }}
+      />
+  <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       
         <main>{children}</main>
         
