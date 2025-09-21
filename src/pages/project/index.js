@@ -1,7 +1,7 @@
 import * as React from "react"
 import Layout from "../../components/layout";
 import Seo from "../../components/seo"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Robonauts from "../../images/project/robonauts.jpg"
 import Spark from "../../images/project/sparks.jpg"
 import Window from "../../images/project/window.jpg"
@@ -23,10 +23,10 @@ const ProjectCardDark = ({ title, description, link, keywords, image }) => (
             <Link to={link} className="font-montserrat inline-flex justify-center items-center
                 
                 mb-4 text-2xl  group-hover:font-bold text-gray-200 group-hover:text-gray-200">
-                PREVIEW  <svg aria-hidden="true" class="ml-4  w-6 h-6 group-hover:translate-x-4 duration-700 delay-75 ease-in-out"
+                PREVIEW  <svg aria-hidden="true" className="ml-4  w-6 h-6 group-hover:translate-x-4 duration-700 delay-75 ease-in-out"
                     fill="currentColor"
                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
             </Link>
 
             <p className="mt-8 font-montserrat text-normal mb-24 
@@ -50,10 +50,10 @@ const ProjectCard = ({ title, description, link, keywords }) => (
             <Link to={link} className="font-montserrat inline-flex justify-center items-center
                 
                 mb-4 text-2xl text-gray-600 group-hover:text-gray-950 group-hover:font-bold dark:text-gray-400 dark:group-hover:text-gray-200">
-                PREVIEW  <svg aria-hidden="true" class="ml-4  w-6 h-6 group-hover:translate-x-4 duration-700 ease-in-out"
+                PREVIEW  <svg aria-hidden="true" className="ml-4  w-6 h-6 group-hover:translate-x-4 duration-700 ease-in-out"
                     fill="currentColor"
                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
             </Link>
 
             <p className="mt-8 font-montserrat text-normal mb-24 text-gray-700
@@ -121,13 +121,13 @@ const ProjectPage = () => (
                     <p className="text-normal font-bold text-gray-500 dark:text-gray-200 mt-4 font-normal">Under the supervision of Prof. Rong Mo and Huibin Sun.</p>
                     <div className="flex max-w-(--breakpoint-xl) mt-4 group hover:scale-102 transition-all">
                         <p className="flex flex-auto">
-                            <a href="https://www.nwpu.edu.cn" class="hover:transition-all duration-1000 ease-in-out
+                            <a href="https://www.nwpu.edu.cn" className="hover:transition-all duration-1000 ease-in-out
                          inline-flex justify-center items-center py-1 px-1 pr-4 
                          mb-7 text-sm text-yellow-700 bg-yellow-100 rounded-full
                           dark:bg-yellow-900 dark:text-yellow-300 hover:bg-yellow-200
                            dark:hover:bg-yellow-800">
-                                <span class="text-xs bg-yellow-600 rounded-full text-white px-4 py-1.5 mr-3">Note</span> <span class="text-sm font-medium">Due to the archieve policy of the university, these projects are no longer maintained.</span>
-                                <svg aria-hidden="true" class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                                <span className="text-xs bg-yellow-600 rounded-full text-white px-4 py-1.5 mr-3">Note</span> <span className="text-sm font-medium">Due to the archieve policy of the university, these projects are no longer maintained.</span>
+                                <svg aria-hidden="true" className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path></svg>
                             </a>
                         </p>
                     </div>
@@ -210,3 +210,17 @@ const ProjectPage = () => (
 export const Head = () => <Seo title="Projects" />
 
 export default ProjectPage;
+
+export const query = graphql`
+    query ProjectIndexQuery($language: String!) {
+        locales: allLocale(filter: { language: { eq: $language } }) {
+            edges {
+                node {
+                    ns
+                    data
+                    language
+                }
+            }
+        }
+    }
+`

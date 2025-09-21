@@ -3,7 +3,7 @@ import * as React from "react"
 
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import CIRPICMELogo from "../../images/project/tpp/cirp-icme-logo.webp"
 import CSCLogo from "../../images/project/china-scholarship-logo.jpg"
 
@@ -137,3 +137,17 @@ const TppPage = () => (
 export const Head = () => <Seo title="In-process unified prediction for process incidence and tool wear based on a deep learning approach" />
 
 export default TppPage
+
+export const query = graphql`
+  query HybridPredictionPageQuery($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`

@@ -4,7 +4,7 @@ import { useState } from "react"
 
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import CSCLogo from "../../images/project/china-scholarship-logo.jpg"
 import { Line } from "react-chartjs-2"
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
@@ -899,3 +899,17 @@ const ModelResponsePage = () => (
 export const Head = () => <Seo title="Minimum Sufficient Signal Condition of Identifying Process Incidence in Stacked Drilling Through Deep Learning" />
 
 export default TppPage
+
+export const query = graphql`
+  query ManchesterUnitPageQuery($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`
