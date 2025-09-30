@@ -80,10 +80,10 @@
     "preview": "预览",
     "phdTitlePrefix": "博士项目",
     "phdUniversity": "曼彻斯特大学",
-    "phdSupervisor": "在 Robert Heinemann 博士 和 Otto Jan Bakker 指导下。",
+    "phdSupervisor": "在 Robert Heinemann 和 Otto Jan Bakker 博士指导下。",
     "mengTitlePrefix": "工程硕士项目",
     "mengUniversity": "西北工业大学",
-    "mengSupervisor": "在 Rong Mo 教授 与 Huibin Sun 指导下。",
+    "mengSupervisor": "在 莫蓉 与 孙惠斌 教授指导下。",
     "note": "注意",
     "archivedNote": "由于学校的存档政策，这些项目不再维护。",
     "androidHeading": "Android 和 Flutter 开源项目",
@@ -92,6 +92,10 @@
     "tppTitle": "刀具过程预测 (TPP)",
     "tppDescription": "使用传感器数据和机器学习对钻孔过程进行预测建模，以估计刀具磨损和性能。",
     "lstmtitle": "基于 LSTM 的混合预测",
-    "lstmDescription": "在加工过程监测和刀具状态估计中应用 LSTM 神经网络进行时序预测。"
+    "lstmDescription": "在加工过程监测和刀具状态估计中应用 LSTM 神经网络进行时序预测。",
+    "disflyTitle": "谈坛",
+    "disflyDescription": "适用于各种屏幕尺寸的跨平台 Discuz! 论坛客户端。",
+    "disflyLink": "https://discuzhub.kidozh.com",
+    "disflyKeywords": "MIT 许可证, 自 2020 年起"
   }
 }

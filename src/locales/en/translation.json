@@ -88,7 +88,11 @@
     "tppTitle": "Tool Process Prediction (TPP)",
     "tppDescription": "Predictive modelling of drilling processes to estimate tool wear and performance using sensor data and machine learning.",
     "lstmtitle": "LSTM-based Hybrid Prediction",
-    "lstmDescription": "Applying LSTM neural networks for time-series prediction in machining process monitoring and tool condition estimation."
+    "lstmDescription": "Applying LSTM neural networks for time-series prediction in machining process monitoring and tool condition estimation.",
+    "disflyTitle": "DisFly",
+    "disflyDescription": "Cross-platform Discuz! forum client for screen in any size.",
+    "disflyLink": "https://discuzhub.kidozh.com",
+    "disflyKeywords": "MIT License, Since 2020"
   }
   ,
   "footer": {

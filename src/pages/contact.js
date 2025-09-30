@@ -19,13 +19,13 @@ const IndexPage = () => {
                     {t('contact.email')}
                     </h1>
                 <p className="text-2xl text-center max-w-none break-normal text-gray-600 dark:text-gray-300 mt-6 font-montserrat">
-                    {t('contact.primaryEmail')}</p>
+                    kidozh<span className="dark:text-orange-500 text-orange-600">[AT]</span>gmail.com</p>
                 <div class="inline-flex items-center justify-center w-full">
                     <hr class="w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
                     <span class="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-gray-50 dark:bg-slate-600 left-1/2 dark:text-white ">{t('contact.or')}</span>
                 </div>
                 <p class="text-2xl text-center max-w-none text-gray-600 dark:text-gray-300 font-montserrat">
-                    kidozh<span className="dark:text-orange-500 text-orange-600">[AT]</span>gmail.com</p>
+                    kidozh<span className="dark:text-orange-500 text-orange-600">[AT]</span>kidozh.com</p>
             </div>
         </section>
         <section className="bg-gray-100 dark:bg-gray-900">
@@ -47,6 +47,7 @@ const IndexPage = () => {
                 <ul className="list-none p-6 font-roboto list-disc transition-all duration-700">
                     <li className=" text-gray-600 dark:text-gray-300 mt-6">kidozh[AT]mail.nwpu.edu.cn</li>
                     <li className=" text-gray-600 dark:text-gray-300 mt-6">jiduo.zhang[AT]rwth-aachen.de</li>
+                    <li className=" text-gray-600 dark:text-gray-300 mt-6">jiduo.zhang[AT]manchester.ac.uk</li>
 
                 </ul>
             </div>

@@ -254,3 +254,29 @@ pre tt:after {
 html {
   font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+/* EBPC title color-cycling animation (used by project/ebpc page) */
+.ebpc-title { display: block; width: 100%; text-align: center; margin-left: 0; margin-right: 0; }
+.ebpc-animated { animation: ebpcColor 10s ease-in-out infinite; display: inline-block; transition: color 0.6s ease, filter 0.3s ease, text-shadow 0.3s ease; will-change: color, filter, text-shadow; filter: blur(0.6px); }
+/* reduce blur on hover/focus for clarity */
+.ebpc-animated:hover, .ebpc-animated:focus { filter: blur(0.2px); }
+/* lighter, smoother stops for the bright theme */
+@keyframes ebpcColor {
+  0% { color: #f97316; } /* orange-400 */
+  33% { color: #fb923c; } /* orange-300 */
+  66% { color: #8b5cf6; } /* violet-500 */
+  100% { color: #f97316; }
+}
+/* dark-mode: use slightly different palette to keep contrast comfortable */
+.dark .ebpc-animated { animation-name: ebpcColorDark; }
+@keyframes ebpcColorDark {
+  0% { color: #fbbf24; } /* amber-400 */
+  33% { color: #fb7185; } /* rose-400 */
+  66% { color: #a78bfa; } /* violet-300 */
+  100% { color: #fbbf24; }
+}
+
+/* Respect user preference for reduced motion: disable animation and blur */
+@media (prefers-reduced-motion: reduce) {
+  .ebpc-animated { animation: none !important; filter: none !important; }
+}
