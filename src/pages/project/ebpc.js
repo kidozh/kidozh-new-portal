@@ -370,12 +370,7 @@ const TppPage = () => {
             
         </p>
 
-        <ul className="list-disc list-inside text-lg font-normal text-gray-700 dark:text-gray-200 mt-4 bg-gray-700 dark:bg-gray-200 hover:bg-gray-400 dark:hover:bg-gray-600 p-4 rounded-lg">
-          <li>Garima Nain</li>
-          <li>Kiran Kumar Kumar Pattanaik</li>
-          <li>Girish Kumar Sharma</li>
-
-        </ul>
+        
         
       </div>
     </section>
@@ -391,8 +386,15 @@ const TppPage = () => {
           <Link to="/contact" className="text-orange-500 dark:text-blue-200 hover:text-orange-700
            transition-all duration-150 ease-in-out underline
            dark:hover:text-blue-200">{t('project.ebpc.contactUs')}</Link>
-          {t('project.ebpc.contactPromptSuffix')}
+          {t('project.ebpc.contactPromptSuffix')} {t('project.ebpc.exceptPeople')} 
         </p>
+
+        <ul className="list-disc list-inside text-lg font-normal text-gray-700 dark:text-gray-200 mt-4 bg-gray-700 dark:bg-gray-200 hover:bg-gray-400 dark:hover:bg-gray-600 p-4 rounded-lg">
+          <li>Garima Nain</li>
+          <li>Kiran Kumar Kumar Pattanaik</li>
+          <li>Girish Kumar Sharma</li>
+
+        </ul>
         
       </div>
 
