@@ -23,7 +23,7 @@ const UpdatePostPage = ({data}) => {
                         </h1>
                         
                         <hr className="my-4 mt-4 mb-8 h-2 border-4 w-32 border-orange-600 dark:border-indigo-400 group-hover:w-full transition-all duration-1000 ease-in-out" />
-                        <article className="prose dark:prose-invert 
+                        <article className="prose dark:prose-invert
                             prose-img:rounded-xl prose-a:text-orange-600 hover:prose-a:text-orange-800
                                 transition-all duration-500 ease-in-out prose-a:no-underline
                             dark:prose-a:text-indigo-300 dark:hover:prose-a:text-indigo-400

@@ -59,12 +59,12 @@
     "email": "电子邮件",
     "or": "或",
     "location": "位置",
-    "notMonitored": "这些邮箱地址不再被监控：",
+    "notMonitored": "这些邮箱地址不再使用：",
     "primaryEmail": "jiduo.zhang[AT]postgrad.manchester.ac.uk",
-    "department": "机械与航空航天工程系，工程学院，曼彻斯特大学",
-    "addressPrefix": "Core 1 North, 4层, Nancy Rothwell Building, Booth St E, Manchester",
-    "postcode": "M13",
-    "country": "英国"
+    "department": "汉川市",
+    "addressPrefix": "湖北省",
+    "postcode": "431602",
+    "country": "中国"
   },
   "notFound": {
     "title": "未找到",
