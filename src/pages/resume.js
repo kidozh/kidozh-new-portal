@@ -62,16 +62,20 @@ const CVPage = () => {
 
                         <strong className="text-xl font-medium">{t('resume.researchInterests')}</strong>
                         <ul className="mt-2 mb-10">
-                            {t('resume.researchList', { returnObjects: true }).map((item, idx) => (
-                                <li key={idx} className="px-2 mt-1">{item}</li>
-                            ))}
+                            {(() => {
+                                const r = t('resume.researchList', { returnObjects: true })
+                                const arr = Array.isArray(r) ? r : []
+                                return arr.map((item, idx) => (<li key={idx} className="px-2 mt-1">{item}</li>))
+                            })()}
                         </ul>
 
                         <strong className="text-xl font-medium">{t('resume.skills')}</strong>
                         <ul className="mt-2 mb-10">
-                            {t('resume.skillsList', { returnObjects: true }).map((item, idx) => (
-                                <li key={idx} className="px-2 mt-1">{item}</li>
-                            ))}
+                            {(() => {
+                                const s = t('resume.skillsList', { returnObjects: true })
+                                const arr = Array.isArray(s) ? s : []
+                                return arr.map((item, idx) => (<li key={idx} className="px-2 mt-1">{item}</li>))
+                            })()}
                         </ul>
 
                         

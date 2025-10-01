@@ -4,6 +4,7 @@ import * as React from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import { Link, graphql } from "gatsby"
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import CIRPICMELogo from "../../images/project/tpp/cirp-icme-logo.webp"
 import CSCLogo from "../../images/project/china-scholarship-logo.jpg"
 
@@ -13,6 +14,7 @@ import ProducerConsumerDemo from "../../components/ProducerConsumerDemo"
 import ConnectivityMap from "../../components/ConnectivityMap"
 
 const TppPage = () => {
+  const { t } = useTranslation()
   const pcRefA = React.useRef(null)
   const pcRefB = React.useRef(null)
   const [globalStartId, setGlobalStartId] = React.useState(0)
@@ -131,8 +133,8 @@ const TppPage = () => {
     <Layout>
     <section className="bg-gray-50 dark:bg-slate-600">
       <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-32">
-  <h1 class="text-8xl md:text-12xl font-mont text-center font-bold text-orange-400 dark:text-white ebpc-animated ebpc-title">EBPC</h1>
-        <h4 class="text-2xl mt-2 font-medium text-slate-700 dark:text-white text-center">Real Time Cloud Computing Framework for Tool Condition Monitoring</h4>
+  <h1 className="text-8xl md:text-12xl font-mont text-center font-bold text-orange-400 dark:text-white ebpc-animated ebpc-title">{t('project.ebpc.title')}</h1>
+    <h4 className="text-2xl mt-2 font-medium text-slate-700 dark:text-white text-center">{t('project.ebpc.subtitle')}</h4>
         
 
         <p className="mt-16 mb-0 font-bold text-gray-400 max-w-none dark:text-gray-300 text-center">
@@ -140,7 +142,7 @@ const TppPage = () => {
           <Link className="hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-150 ease-in-out" to="https://research.manchester.ac.uk/en/persons/robert.heinemann">Robert Heinemann</Link><sup>1</sup> and&nbsp;
           <Link className="hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-150 ease-in-out" to="https://research.manchester.ac.uk/en/persons/ottojan.bakker">Otto Jan Bakker</Link><sup>1</sup>
         </p>
-        <p className="font-bold text-gray-400 max-w-none dark:text-gray-300 mt-0 text-center"><sup>1</sup> Department of Mechanical and Aerospace Engineering, The University of Manchester</p>
+        <p className="font-bold text-gray-400 max-w-none dark:text-gray-300 mt-0 text-center"><sup>1</sup> {t('project.ebpc.affiliation')}</p>
 
         <div className="mt-12 flex-1 justify-items-center">
           <div className="flex justify-center">
@@ -149,7 +151,7 @@ const TppPage = () => {
             focus:ring-4 focus:ring-orange-300 
             font-medium rounded-full text-normal px-5 py-2.5 
             text-center mr-2 mb-2 dark:bg-blue-600
-              dark:hover:bg-blue-700 dark:focus:ring-blue-800" to="https://link.springer.com/article/10.1007/s10845-025-02657-7">Read our paper</Link>
+              dark:hover:bg-blue-700 dark:focus:ring-blue-800" to="https://link.springer.com/article/10.1007/s10845-025-02657-7">{t('project.ebpc.readPaper')}</Link>
             {/* <Link className="px-5 py-2.5 
              text-blue-700 dark:text-blue-100
             text-center mr-2 mb-2" 
@@ -164,7 +166,7 @@ const TppPage = () => {
     <section className="bg-gray-100 dark:bg-slate-700">
       <div className="w-full mx-auto max-w-6xl max-w-(--breakpoint-l) px-6 py-8">
         <h1 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white max-w-none">
-          Highlights of our framework:
+          {t('project.ebpc.highlightsHeading')}
         </h1>
       </div>
       <div className="w-full mx-auto max-w-6xl max-w-(--breakpoint-xl) px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -172,28 +174,28 @@ const TppPage = () => {
       hover:bg-linear-to-r hover:from-orange-200 hover:to-red-200
       hover:scale-105 dark:hover:bg-linear-to-r dark:hover:from-cyan-500 dark:hover:to-blue-500
       group hover:transition-all duration-500 ease-in-out p-6">
-          <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">Exponential Backoff Traffic Control</h2>
+          <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">{t('project.ebpc.exponential.title')}</h2>
           <hr className="h-1 my-8 w-32 group-hover:w-full mt-2 mb-4 bg-orange-500 border-orange-500 group-hover:transition-all ease-in-out duration-800
             border-2 dark:bg-indigo-500 dark:border-indigo-500
              dark:group-hover:bg-slate-100 dark:group-hover:border-slate-100
               group-hover:bg-red-600 group-hover:border-red-600" />
           <p className="mt-4 font-light text-normal text-gray-700
             dark:text-gray-200 border-b-orange-700">
-              Progressive traffic control mechanism to adaptively adjust data transmission rates based on network conditions, ensuring efficient and reliable communication between edge devices and the cloud.
+              {t('project.ebpc.exponential.desc')}
             </p>
         </div>
         <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden
       hover:bg-linear-to-r hover:from-orange-200 hover:to-red-200
       hover:scale-105 dark:hover:bg-linear-to-r dark:hover:from-cyan-500 dark:hover:to-blue-500
       group hover:transition-all duration-500 ease-in-out p-6">
-          <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">Data minimisation</h2>
+          <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">{t('project.ebpc.datamin.title')}</h2>
           <hr className="h-1 my-8 w-32 group-hover:w-full mt-2 mb-4 bg-orange-500 border-orange-500 group-hover:transition-all ease-in-out duration-800
             border-2 dark:bg-indigo-500 dark:border-indigo-500
              dark:group-hover:bg-slate-100 dark:group-hover:border-slate-100
               group-hover:bg-red-600 group-hover:border-red-600" />
           <p className="mt-4  font-light text-normal text-gray-700
             dark:text-gray-200 border-b-orange-700">
-              The compression from the aspect of data shape<sup>[1]</sup>, dimension and bit depth is applied to reduce the data size for transmission, while retaining the essential information for accurate tool condition monitoring.
+              {t('project.ebpc.datamin.desc')}<sup>[1]</sup>
 
             </p>
             <p className="mt-4  font-light text-normal text-gray-700
@@ -204,14 +206,14 @@ const TppPage = () => {
       hover:bg-linear-to-r hover:from-orange-200 hover:to-red-200
       hover:scale-105 dark:hover:bg-linear-to-r dark:hover:from-cyan-500 dark:hover:to-blue-500
       group hover:transition-all duration-500 ease-in-out p-6">
-          <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">Producer-Consumer Task Scheduling</h2>
+          <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">{t('project.ebpc.producer.title')}</h2>
           <hr className="h-1 my-8 w-32 group-hover:w-full mt-2 mb-4 bg-orange-500 border-orange-500 group-hover:transition-all ease-in-out duration-800
             border-2 dark:bg-indigo-500 dark:border-indigo-500
              dark:group-hover:bg-slate-100 dark:group-hover:border-slate-100
               group-hover:bg-red-600 group-hover:border-red-600" />
           <p className="mt-4  font-light text-normal text-gray-700
             dark:text-gray-200 border-b-orange-700">
-              Efficient task scheduling mechanism that manages resource allocation effectively, ensuring timely processing of data and responsiveness of the tool condition monitoring system for all clients.
+              {t('project.ebpc.producer.desc')}
             </p>
         </div>
 
@@ -219,14 +221,14 @@ const TppPage = () => {
       hover:bg-linear-to-r hover:from-orange-200 hover:to-red-200
       hover:scale-105 dark:hover:bg-linear-to-r dark:hover:from-cyan-500 dark:hover:to-blue-500
       group hover:transition-all duration-500 ease-in-out p-6">
-          <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">Dynamic Task Prioritisation</h2>
+          <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">{t('project.ebpc.prioritisation.title')}</h2>
           <hr className="h-1 my-8 w-32 group-hover:w-full mt-2 mb-4 bg-orange-500 border-orange-500 group-hover:transition-all ease-in-out duration-800
             border-2 dark:bg-indigo-500 dark:border-indigo-500
              dark:group-hover:bg-slate-100 dark:group-hover:border-slate-100
               group-hover:bg-red-600 group-hover:border-red-600" />
           <p className="mt-4  font-light text-normal text-gray-700
             dark:text-gray-200 border-b-orange-700">
-              Self-adaptive prioritization mechanism that dynamically adjusts task priorities based on real-time system conditions and requirements, ensuring critical tasks are processed promptly for effective tool condition monitoring.
+              {t('project.ebpc.prioritisation.desc')}
             </p>
         </div>
         
@@ -235,15 +237,15 @@ const TppPage = () => {
 
     <section className="bg-gray-50 dark:bg-slate-800">
       <div className="w-full mx-auto max-w-6xl px-6 py-12">
-        <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white mb-6">Exponential backoff In Client — interactive demo</h2>
+  <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white mb-6">{t('project.ebpc.expDemoHeading')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ExponentialBackoffDemo />
           <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">How it works</h3>
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{t('project.ebpc.expDemoHow')}</h3>
             <p className="mt-3 text-gray-700 dark:text-gray-200 text-sm">
-              This interactive demo runs a continuous sender that measures simulated network round-trip times (RTT) and adapts the send interval in real time. A "Network success" slider controls the probability that a request succeeds; when a request fails the sender immediately doubles the send interval (exponential backoff). When a request succeeds the demo uses the observed RTT to adapt the interval: if the observed RTT is more than twice the current send interval the interval is doubled; if the observed RTT is less than half the current send interval the interval is halved. Small random jitter is added to adjustments to avoid synchronized retries.
+              {t('project.ebpc.expDemoPara')}
             </p>
-            <p className="mt-3 text-gray-600 dark:text-gray-300 text-sm"><strong>Parameters:</strong> baseDelay = 100ms, adaptive rules (failure → ×2; success → double if RTT &gt; 2×interval, halve if RTT &lt; interval/2), jitter up to 10% of the interval, cap = 20000ms. Use the controls to change simulated RTT and success rate and press Start to run the demo.</p>
+            <p className="mt-3 text-gray-600 dark:text-gray-300 text-sm"><strong>{t('project.ebpc.expDemoParams')}</strong></p>
           </div>
         </div>
       </div>
@@ -251,28 +253,28 @@ const TppPage = () => {
 
     <section className="bg-slate-100 dark:bg-slate-700">
       <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16">
-        <h1 className="text-4xl font-montserrat text-center font-bold mt-2 text-orange-700 dark:text-blue-200 max-w-none">
-          Data compression
-        </h1>
+        <h2 className="text-4xl font-montserrat text-center font-bold mt-2 text-orange-700 dark:text-blue-200 max-w-none">
+          {t('project.ebpc.bitDepthTitle')}
+        </h2>
         
         <div className="w-full mx-auto max-w-6xl px-6 py-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <BitDepthDemo />
             <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white ">How it works</h3>
-              <p className="mt-3 text-gray-700 dark:text-gray-200 text-sm">
-                This interactive demo allows you to explore the effects of bit depth reduction on signal quality. The slider lets you adjust the bit depth from 1 to 8 bits per channel, allowing you to see how reducing the bit depth affects the signal's appearance. This is particularly useful for understanding how data compression can be achieved by reducing the number of bits used to represent each feature in the signal.
-              </p>
-              <p className="mt-3 text-gray-600 dark:text-gray-300 text-sm"><strong>Note:</strong> Reducing bit depth can lead to a loss of precision information and may introduce visual artifacts, especially at very low bit depths. When the quantized noise exceeds the SNR of features in the original signal, features can become interferred, leading to a degradation in perceived quality.</p>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white ">{t('project.ebpc.dataCompressionHow')}</h3>
+                <p className="mt-3 text-gray-700 dark:text-gray-200 text-sm">
+                  {t('project.ebpc.dataCompressionPara')}
+                </p>
+                <p className="mt-3 text-gray-600 dark:text-gray-300 text-sm"><strong>{t('project.ebpc.dataCompressionNoteStrong')}</strong></p>
             </div>
 
           </div>
           
         </div>
         <p className="text-2xl mt-4 text-center font-medium text-slate-500 dark:text-slate-200 max-w-none">
-          <small>Check the <Link to="/project/manchester-unit" className="text-orange-500 dark:text-blue-200 hover:text-orange-700
+          <small>{t('project.ebpc.dataCompressionNotePrefix')} <Link to="/project/manchester-unit" className="text-orange-500 dark:text-blue-200 hover:text-orange-700
            transition-all duration-150 ease-in-out underline
-           dark:hover:text-blue-200">Minimum Sufficient Unit Theory</Link> for the compression from the aspect of data shape. </small>
+           dark:hover:text-blue-200">{t('project.ebpc.dataCompressionNoteLinkText')}</Link> {t('project.ebpc.dataCompressionNoteSuffix')}</small>
         </p>
         {/* Data size table removed per request */}
       </div>
@@ -280,15 +282,15 @@ const TppPage = () => {
 
     <section className="bg-white dark:bg-slate-800">
       <div className="w-full mx-auto max-w-6xl px-6 py-12">
-        <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white mb-6">Producer / Consumer — interactive demo (comparison)</h2>
-        <p className="text-sm text-gray-600 dark:text-gray-300">Compare the two demos side-by-side. The right-hand demo is configured with concurrency = 1 to simulate a traditional architecture that awaits the completion of each task before starting the next. Observe the average latency of both condition and the traditional methods can not handle the situation as latency keep surged and the system are overwhelmed by the requests.</p>
+  <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white mb-6">{t('project.ebpc.producerHeading')}</h2>
+  <p className="text-sm text-gray-600 dark:text-gray-300">{t('project.ebpc.producerComparison')}</p>
         <div className="mb-4 mt-2 flex gap-3">
-          <button onClick={startAll} className="text-white bg-orange-600 hover:bg-orange-700 font-medium rounded-full px-4 py-2">Start all</button>
-          <button onClick={stopAll} className="text-orange-700 bg-orange-100 hover:bg-orange-200 font-medium rounded-full px-4 py-2">Stop all</button>
+          <button onClick={startAll} className="text-white bg-orange-600 hover:bg-orange-700 font-medium rounded-full px-4 py-2">{t('project.ebpc.startAll')}</button>
+          <button onClick={stopAll} className="text-orange-700 bg-orange-100 hover:bg-orange-200 font-medium rounded-full px-4 py-2">{t('project.ebpc.stopAll')}</button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <ProducerConsumerDemo ref={pcRefA} title="Concurrency = 4 (default)" initialConcurrency={4} initialProduceInterval={500} initialProcessTime={800} initialBufferSize={20} initialMode={'bounded'} globalStartId={globalStartId} globalStopId={globalStopId} externalProduceController={sharedControllerRef.current} />
-          <ProducerConsumerDemo ref={pcRefB} title="Concurrency = 1 (Traditional architecture)" initialConcurrency={1} initialProduceInterval={500} initialProcessTime={800} initialBufferSize={20} initialMode={'bounded'} globalStartId={globalStartId} globalStopId={globalStopId} externalProduceController={sharedControllerRef.current} />
+          <ProducerConsumerDemo ref={pcRefA} title={t('project.ebpc.concurrencyDefault') || 'Concurrency = 4 (default)'} initialConcurrency={4} initialProduceInterval={500} initialProcessTime={800} initialBufferSize={20} initialMode={'bounded'} globalStartId={globalStartId} globalStopId={globalStopId} externalProduceController={sharedControllerRef.current} />
+          <ProducerConsumerDemo ref={pcRefB} title={t('project.ebpc.concurrencyTraditional') || 'Concurrency = 1 (Traditional architecture)'} initialConcurrency={1} initialProduceInterval={500} initialProcessTime={800} initialBufferSize={20} initialMode={'bounded'} globalStartId={globalStartId} globalStopId={globalStopId} externalProduceController={sharedControllerRef.current} />
         </div>
         
       </div>
@@ -296,14 +298,15 @@ const TppPage = () => {
 
     <section className="bg-gray-50 dark:bg-slate-800">
       <div className="w-full mx-auto max-w-6xl px-6 py-12">
-        <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white mb-6">Deploy worldwide for Tool Condition Monitoring with minimal delay</h2>
+  <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white mb-6">{t('project.ebpc.deployHeading')}</h2>
         <div className="flex justify-center">
-          <div className="w-full max-w-3xl p-6 bg-white dark:bg-slate-800 rounded-lg shadow">
+          <div className="w-full max-w-6xl p-6 bg-white dark:bg-slate-800 rounded-lg shadow">
             
             <div className="mt-6">
-              <h4 className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">Connectivity points (weighted)</h4>
+              <h4 className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t('project.ebpc.connectivityLabel')}</h4>
               <div className="w-full">
-                <ConnectivityMap data={connectivityData} width={800} height={320} pointScale={12} />
+                {/* increase internal canvas/projection width so the heatmap is rendered at higher resolution */}
+                <ConnectivityMap data={connectivityData} width={1200} height={360} pointScale={14} />
               </div>
             </div>
           </div>
@@ -314,16 +317,18 @@ const TppPage = () => {
     <section className="bg-gray-100 dark:bg-slate-700">
       <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-16">
         <h1 className="text-4xl font-montserrat text-center font-bold mt-2 text-orange-700 dark:text-blue-200 max-w-none">
-          Conclusions
+          {t('project.ebpc.conclusionsHeading')}
         </h1>
         
         <div className="w-full mx-auto max-w-6xl px-6 py-8">
           <ul className="list-disc list-inside text-lg font-normal text-gray-700 dark:text-gray-200">
-                  <li>We proposed a novel cloud computing framework EBPC for real-time tool condition monitoring, which incorporates exponential backoff-based traffic control, data minimisation, producer-consumer task scheduling, and dynamic task prioritisation.</li>
-                  <li>Our framework effectively addresses challenges such as network congestion, data overload, and resource contention, ensuring efficient and reliable tool condition monitoring.</li>
-                  <li>Experimental results demonstrate that EBPC outperforms traditional architectures in terms of latency, throughput, and resource utilisation, making it a promising solution for real-time tool condition monitoring in manufacturing environments.</li>
-            </ul>
-          
+            {(() => {
+              const c = t('project.ebpc.conclusionsList', { returnObjects: true })
+              const arr = Array.isArray(c) ? c : []
+              return arr.map((s, i) => (<li key={i}>{s}</li>))
+            })()}
+          </ul>
+
         </div>
       </div>
     </section>
@@ -334,10 +339,10 @@ const TppPage = () => {
       <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-8 lg:flex align-middle">
         <div className="flex-1 justify-center align-middle">
           <p className="text-4xl p-8 font-normal text-orange-900 dark:text-blue-200 max-w-none">
-            Jiduo would like to acknowledge the continuing contribution to this research by&nbsp;
+            {t('project.ebpc.ackPrefix')} &nbsp;
             <Link to="https://www.csc.edu.cn/" className="hover:text-orange-700
             transition-all duration-150 ease-in-out hover:underline font-bold
-            dark:hover:text-blue-200">China scholarship council</Link>.
+            dark:hover:text-blue-200">{t('project.ebpc.ackLinkText')}</Link>{t('project.ebpc.ackSuffix')}
           </p>
         </div>
 
@@ -355,6 +360,26 @@ const TppPage = () => {
 
     </section>
 
+    <section className="bg-gray-300 dark:bg-gray-700">
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-8">
+        <h1 className="text-4xl font-montserrat text-center font-bold mt-2 text-gray-700 dark:text-blue-200 max-w-none">
+          {t('project.ebpc.statementForReviwerTitle')}
+        </h1>
+        <p className="text-2xl mt-4 font-normal text-gray-500 dark:text-gray-200 max-w-none">
+          {t('project.ebpc.statementForReviwerPara')}
+            
+        </p>
+
+        <ul className="list-disc list-inside text-lg font-normal text-gray-700 dark:text-gray-200 mt-4 bg-gray-700 dark:bg-gray-200 hover:bg-gray-400 dark:hover:bg-gray-600 p-4 rounded-lg">
+          <li>Garima Nain</li>
+          <li>Kiran Kumar Kumar Pattanaik</li>
+          <li>Girish Kumar Sharma</li>
+
+        </ul>
+        
+      </div>
+    </section>
+
     
 
 
@@ -362,11 +387,13 @@ const TppPage = () => {
     <section className="bg-gray-100 dark:bg-gray-700">
       <div className="w-full mx-auto max-w-(--breakpoint-xl) px-6 py-8">
         <p className="text-2xl mt-2 font-normal text-gray-500 dark:text-gray-200 max-w-none">
-          If you have any questions or suggestions, please feel free to&nbsp;
-          <Link to="/contact" className="text-blue-500 dark:text-blue-200 hover:text-blue-700
+          {t('project.ebpc.contactPromptPrefix')}&nbsp;
+          <Link to="/contact" className="text-orange-500 dark:text-blue-200 hover:text-orange-700
            transition-all duration-150 ease-in-out underline
-           dark:hover:text-blue-200">contact us</Link>.
+           dark:hover:text-blue-200">{t('project.ebpc.contactUs')}</Link>
+          {t('project.ebpc.contactPromptSuffix')}
         </p>
+        
       </div>
 
 
@@ -383,7 +410,7 @@ const TppPage = () => {
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="In-process unified prediction for process incidence and tool wear based on a deep learning approach" />
+export const Head = () => <Seo title="EBPC: A cloud computing framework for immediate tool condition monitoring" />
 
 export default TppPage
 

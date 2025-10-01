@@ -1,6 +1,8 @@
 import * as React from "react"
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 export default function ExponentialBackoffDemo() {
+  const { t } = useTranslation()
   const [attempts, setAttempts] = React.useState([])
   const [running, setRunning] = React.useState(false)
   const [currentDelay, setCurrentDelay] = React.useState(null)
@@ -254,12 +256,11 @@ export default function ExponentialBackoffDemo() {
 
   return (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6">
-      <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">Exponential Backoff Demo</h2>
+      <h2 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white">{t('project.ebpc.expDemoTitle')}</h2>
       <hr className="h-1 my-6 w-24 bg-orange-500 border-orange-500" />
 
       <p className="text-gray-700 dark:text-gray-200 font-light mb-4">
-        The demo shows how the retry interval dynamically adapts: each failure doubles the delay (capped) and adds a small jitter.
-        Use the <strong>network success</strong> slider to change the simulated probability of success per attempt.
+        {t('project.ebpc.expDemoDesc')}
       </p>
 
       <div className="flex gap-3 mb-4 items-center">
@@ -268,27 +269,27 @@ export default function ExponentialBackoffDemo() {
           disabled={running}
           className="text-white bg-orange-600 hover:bg-orange-700 disabled:opacity-50 font-medium rounded-full px-4 py-2"
         >
-          Start
+          {t('project.ebpc.expDemoStart')}
         </button>
         <button
           onClick={cancel}
           disabled={!running}
           className="text-orange-700 bg-orange-100 hover:bg-orange-200 disabled:opacity-50 font-medium rounded-full px-4 py-2"
         >
-          Cancel
+          {t('project.ebpc.expDemoCancel')}
         </button>
         <button
           onClick={reset}
           className="text-gray-700 bg-gray-100 hover:bg-gray-200 font-medium rounded-full px-3 py-2"
         >
-          Reset
+          {t('project.ebpc.expDemoReset')}
         </button>
       </div>
 
       {/* Prominent current delay display */}
       <div className="mb-4">
         <div aria-live="polite" className="inline-flex items-baseline gap-3">
-          <span className="text-sm text-gray-500 dark:text-gray-300">Current send interval:</span>
+          <span className="text-sm text-gray-500 dark:text-gray-300">{t('project.ebpc.expDemoCurrentInterval')}</span>
           <span className="text-xl font-mono font-semibold text-orange-600 dark:text-orange-400">{currentDelay === null ? '-' : `${currentDelay} ms`}</span>
           {changeIndicator === 'increase' && <span className="ml-2 px-2 py-0.5 text-xs bg-red-100 text-red-700 rounded">↑</span>}
           {changeIndicator === 'decrease' && <span className="ml-2 px-2 py-0.5 text-xs bg-green-100 text-green-700 rounded">↓</span>}
@@ -297,7 +298,7 @@ export default function ExponentialBackoffDemo() {
 
       <div className="mb-4 space-y-3">
         <div>
-          <label className="text-sm text-gray-600 dark:text-gray-300">Network success: {successPct}%</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('project.ebpc.expDemoNetworkSuccess', { pct: successPct })}</label>
           <input
             type="range"
             min="0"
@@ -310,7 +311,7 @@ export default function ExponentialBackoffDemo() {
         </div>
 
         <div>
-          <label className="text-sm text-gray-600 dark:text-gray-300">Simulated network RTT (ms): {networkRTT} ms</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('project.ebpc.expDemoNetworkRtt', { ms: networkRTT })}</label>
           <input
             type="range"
             min="0"
@@ -323,7 +324,7 @@ export default function ExponentialBackoffDemo() {
         </div>
 
         <div>
-          <label className="text-sm text-gray-600 dark:text-gray-300">Current scheduled delay (ms)</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('project.ebpc.expDemoScheduledDelay')}</label>
           <input
             type="range"
             min="0"
@@ -338,13 +339,13 @@ export default function ExponentialBackoffDemo() {
       </div>
 
       <div className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-        <div className="mb-1">Running: <strong>{running ? 'yes' : 'no'}</strong></div>
-        <div className="mb-1">Attempts: <strong>{attempts.length}</strong></div>
-        <div className="mb-1">Current delay: <strong>{currentDelay === null ? '-' : `${currentDelay} ms`}</strong>
+  <div className="mb-1">{t('project.ebpc.expDemoRunning')}: <strong>{running ? t('project.ebpc.yes') : t('project.ebpc.no')}</strong></div>
+  <div className="mb-1">{t('project.ebpc.expDemoAttempts')}: <strong>{attempts.length}</strong></div>
+  <div className="mb-1">{t('project.ebpc.expDemoCurrentDelay')}: <strong>{currentDelay === null ? '-' : `${currentDelay} ms`}</strong>
           {changeIndicator === 'increase' && <span className="ml-2 px-2 py-0.5 text-xs bg-red-100 text-red-700 rounded">↑</span>}
           {changeIndicator === 'decrease' && <span className="ml-2 px-2 py-0.5 text-xs bg-green-100 text-green-700 rounded">↓</span>}
         </div>
-        <div className="mb-1">Next send in: <strong>{nextSendRemaining == null ? '-' : `${Math.ceil(nextSendRemaining)} ms`}</strong></div>
+  <div className="mb-1">{t('project.ebpc.expDemoNextSendIn')}: <strong>{nextSendRemaining == null ? '-' : `${Math.ceil(nextSendRemaining)} ms`}</strong></div>
       </div>
       <div className="mb-4">
         {/* Sparkline */}
@@ -357,10 +358,10 @@ export default function ExponentialBackoffDemo() {
 
       {/* Decision log */}
       <div className="mb-4">
-        <h4 className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">Decision log (latest)</h4>
+  <h4 className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t('project.ebpc.expDemoDecisionLogTitle')}</h4>
         <div className="overflow-auto max-h-40 border rounded p-2 bg-white dark:bg-slate-800 text-sm">
           {logs.length === 0 ? (
-            <div className="text-gray-500">No decisions yet.</div>
+            <div className="text-gray-500">{t('project.ebpc.expDemoNoDecisions')}</div>
           ) : (
             <ul className="list-none space-y-1">
               {logs.map((l, i) => (
@@ -376,16 +377,16 @@ export default function ExponentialBackoffDemo() {
 
       <div className="overflow-auto max-h-60 border rounded p-2 bg-gray-50 dark:bg-slate-700">
         {attempts.length === 0 ? (
-          <div className="text-gray-500">No attempts yet.</div>
+          <div className="text-gray-500">{t('project.ebpc.expDemoNoAttempts')}</div>
         ) : (
           <table className="min-w-full text-sm">
             <thead>
               <tr className="text-left">
-                <th className="px-2 py-1">#</th>
-                <th className="px-2 py-1">Status</th>
-                <th className="px-2 py-1">Delay at send (ms)</th>
-                <th className="px-2 py-1">Observed RTT (ms)</th>
-                <th className="px-2 py-1">Time</th>
+                <th className="px-2 py-1">{t('project.ebpc.table.index')}</th>
+                <th className="px-2 py-1">{t('project.ebpc.table.status')}</th>
+                <th className="px-2 py-1">{t('project.ebpc.table.delayAtSend')}</th>
+                <th className="px-2 py-1">{t('project.ebpc.table.observedRtt')}</th>
+                <th className="px-2 py-1">{t('project.ebpc.table.time')}</th>
               </tr>
             </thead>
             <tbody>

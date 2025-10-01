@@ -1,6 +1,8 @@
 import * as React from 'react'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 export default function BitDepthDemo() {
+  const { t } = useTranslation()
   const [bitDepth, setBitDepth] = React.useState(8)
   const [noiseLevel, setNoiseLevel] = React.useState(0.05)
   const [isDark, setIsDark] = React.useState(false)
@@ -139,11 +141,11 @@ export default function BitDepthDemo() {
         .bitdemo-fade { animation: fadein 400ms ease-out; }
         .bitdemo-pulse { animation: pulse 1400ms ease-in-out infinite; }
       `}</style>
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">Bit depth demo</h3>
-      <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">Adjust bit depth and noise; the signal animates and SNR updates in real time.</p>
+  <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">{t('project.ebpc.bitDepthTitle')}</h3>
+  <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">{t('project.ebpc.bitDepthDesc')}</p>
 
       <div className="mb-3">
-        <label className="text-sm text-gray-600 dark:text-gray-300">Bit depth: <strong>{bitDepth}</strong></label>
+  <label className="text-sm text-gray-600 dark:text-gray-300">{t('project.ebpc.bitDepthLabel')}: <strong>{bitDepth}</strong></label>
         <input
           type="range"
           min="1"
@@ -156,7 +158,7 @@ export default function BitDepthDemo() {
       </div>
 
       <div className="mb-3">
-        <label className="text-sm text-gray-600 dark:text-gray-300">Noise level: <strong>{(noiseLevel * 100).toFixed(0)}%</strong></label>
+  <label className="text-sm text-gray-600 dark:text-gray-300">{t('project.ebpc.noiseLevelLabel')}: <strong>{(noiseLevel * 100).toFixed(0)}%</strong></label>
         <input
           type="range"
           min="0"
@@ -175,22 +177,22 @@ export default function BitDepthDemo() {
             <polyline fill="none" stroke={strokeOrig} strokeWidth="1.5" points={origPoints} />
             <polyline className="bitdemo-pulse" fill="none" stroke={strokeQuant} strokeWidth="1.5" points={qPoints} />
           </svg>
-          <div className="text-xs text-gray-500 dark:text-gray-400">{isDark ? 'Blue: original, Orange: quantized' : 'Orange: original, Blue: quantized'}</div>
+          <div className="text-xs text-gray-500 dark:text-gray-400">{isDark ? t('project.ebpc.legendDark') : t('project.ebpc.legendLight')}</div>
         </div>
       </div>
 
       <div className="flex gap-6 items-center">
-        <div className="text-sm text-gray-700 dark:text-gray-200">Estimated bits/sample: <strong>{estimatedBits} bits</strong></div>
-        <div className="text-sm text-gray-700 dark:text-gray-200">Est. reduction vs 16-bit: <strong>{reduction}%</strong></div>
+  <div className="text-sm text-gray-700 dark:text-gray-200">{t('project.ebpc.estimatedBits')}: <strong>{estimatedBits} bits</strong></div>
+  <div className="text-sm text-gray-700 dark:text-gray-200">{t('project.ebpc.estimatedReduction')}: <strong>{reduction}%</strong></div>
         <div className="flex items-center gap-3">
-          <div className="text-sm text-gray-700 dark:text-gray-200">SNR:</div>
+          <div className="text-sm text-gray-700 dark:text-gray-200">{t('project.ebpc.snrLabel')}:</div>
           <div className="flex items-center gap-2">
             <SparklineMini values={snrHistory} color={snr >= 30 ? '#16a34a' : snr >= 20 ? '#f59e0b' : '#ef4444'} />
             <div className="text-sm text-gray-700 dark:text-gray-200">{snr == null ? '—' : `${snr.toFixed(1)} dB`}</div>
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <div className="text-sm text-gray-700 dark:text-gray-200">SQNR:</div>
+          <div className="text-sm text-gray-700 dark:text-gray-200">{t('project.ebpc.sqnrLabel')}:</div>
           <div className="flex items-center gap-2">
             <SparklineMini values={sqnrHistory} color={sqnr >= 40 ? '#16a34a' : sqnr >= 25 ? '#f59e0b' : '#ef4444'} />
             <div className="text-sm text-gray-700 dark:text-gray-200">{sqnr == null ? '—' : `${sqnr.toFixed(1)} dB`}</div>

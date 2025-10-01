@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 function Sparkline({ values = [], width = 200, height = 40, color = '#F97316' }) {
   if (!values || values.length === 0) return null
@@ -32,6 +33,7 @@ function ProducerConsumerDemo({
   globalStopId = 0,
   externalProduceController = null,
 }) {
+  const { t } = useTranslation()
   const [running, setRunning] = React.useState(false)
   const [produceInterval, setProduceInterval] = React.useState(initialProduceInterval) // ms
   const [processTime, setProcessTime] = React.useState(initialProcessTime) // ms per item
@@ -308,46 +310,47 @@ function ProducerConsumerDemo({
           to { transform: translateY(-8px); opacity: 0 }
         }
       `}</style>
-  <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">{title || 'Producer / Consumer demo'}</h3>
-      <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">This demo simulates a producer adding messages to a queue and consumers processing them. Toggle between a bounded queue (drops when full) and a hard-buffer (never drops) to compare behaviour. A sparkline shows recent queue length.</p>
+  <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">{title || t('project.ebpc.producerDemoTitle')}</h3>
+    <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{t('project.ebpc.producerDemoDesc')}</p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <div>
-          <label className="text-sm text-gray-600 dark:text-gray-300">Produce interval: <strong>{produceInterval} ms</strong></label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('project.ebpc.produceInterval', { ms: produceInterval })}</label>
           <input type="range" min="50" max="2000" value={produceInterval} onChange={(e) => setProduceInterval(Number(e.target.value))} className="w-full mt-2" />
         </div>
         <div>
-          <label className="text-sm text-gray-600 dark:text-gray-300">Processing time: <strong>{processTime} ms</strong></label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('project.ebpc.processingTime', { ms: processTime })}</label>
           <input type="range" min="50" max="3000" value={processTime} onChange={(e) => setProcessTime(Number(e.target.value))} className="w-full mt-2" />
         </div>
         <div>
-          <label className="text-sm text-gray-600 dark:text-gray-300">Concurrency: <strong>{concurrency}</strong></label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('project.ebpc.concurrencyLabel', { n: concurrency })}</label>
           <input type="range" min="1" max="8" value={concurrency} onChange={(e) => setConcurrency(Number(e.target.value))} className="w-full mt-2" />
         </div>
         <div>
-          <label className="text-sm text-gray-600 dark:text-gray-300">Buffer size: <strong>{bufferSize}</strong></label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('project.ebpc.bufferSize', { n: bufferSize })}</label>
           <input type="range" min="1" max="200" value={bufferSize} onChange={(e) => setBufferSize(Number(e.target.value))} className="w-full mt-2" />
         </div>
       </div>
 
       <div className="flex gap-3 items-center mb-4">
         <div className="flex gap-2">
-          <button onClick={start} disabled={running} className="text-white bg-orange-600 hover:bg-orange-700 disabled:opacity-50 font-medium rounded-full px-4 py-2">Start</button>
-          <button onClick={stop} disabled={!running} className="text-orange-700 bg-orange-100 hover:bg-orange-200 disabled:opacity-50 font-medium rounded-full px-4 py-2">Stop</button>
+          <button onClick={start} disabled={running} className="text-white bg-orange-600 hover:bg-orange-700 disabled:opacity-50 font-medium rounded-full px-4 py-2">{t('project.ebpc.start')}</button>
+          <button onClick={stop} disabled={!running} className="text-orange-700 bg-orange-100 hover:bg-orange-200 disabled:opacity-50 font-medium rounded-full px-4 py-2">{t('project.ebpc.stop')}</button>
         </div>
         <div className="ml-4 flex items-center gap-2">
-          <label className="text-sm text-gray-600 dark:text-gray-300">Mode:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('project.ebpc.modeLabel')}</label>
           <select value={mode} onChange={(e) => setMode(e.target.value)} className="text-sm p-1 rounded">
-            <option value="bounded">Bounded (drops when full)</option>
-            <option value="hard-buffer">Hard buffer (never drops)</option>
+            <option value="bounded">{t('project.ebpc.modeBounded')}</option>
+            <option value="hard-buffer">{t('project.ebpc.modeHardBuffer')}</option>
+            <option value="blocking">{t('project.ebpc.modeBlocking')}</option>
           </select>
         </div>
       </div>
 
       <div className="mb-4">
         <div className="flex justify-between items-center mb-2">
-          <div className="text-sm text-gray-700 dark:text-gray-200">Queue (size {queue.length})</div>
-          <div className="text-xs text-gray-500 dark:text-gray-400">Recent queue length</div>
+          <div className="text-sm text-gray-700 dark:text-gray-200">{t('project.ebpc.queueHeading', { size: queue.length })}</div>
+          <div className="text-xs text-gray-500 dark:text-gray-400">{t('project.ebpc.recentQueueLength')}</div>
         </div>
         <div className="flex items-center gap-4">
           <div className="flex-1">
@@ -378,7 +381,7 @@ function ProducerConsumerDemo({
       </div>
 
       <div className="mb-4">
-        <div className="text-sm text-gray-700 dark:text-gray-200 mb-2">Recently processed (animated):</div>
+  <div className="text-sm text-gray-700 dark:text-gray-200 mb-2">{t('project.ebpc.recentlyProcessed')}</div>
         <div className="flex gap-2 flex-wrap">
           {recentProcessed.map((id) => (
             <div key={id} aria-hidden style={{ animation: 'slideUpFade 0.8s ease forwards' }} className="px-2 py-1 text-xs bg-green-100 dark:bg-green-800 rounded">
@@ -389,10 +392,10 @@ function ProducerConsumerDemo({
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm text-gray-700 dark:text-gray-200">
-        <div>Processed: <strong>{processed}</strong></div>
-        <div>Dropped: <strong>{dropped}</strong></div>
-        <div>Workers: <strong>{workersRef.current}</strong></div>
-        <div>Avg latency: <strong>{avgLatency} ms</strong></div>
+  <div>{t('project.ebpc.processed')}: <strong>{processed}</strong></div>
+  <div>{t('project.ebpc.dropped')}: <strong>{dropped}</strong></div>
+  <div>{t('project.ebpc.workers')}: <strong>{workersRef.current}</strong></div>
+  <div>{t('project.ebpc.avgLatency')}: <strong>{avgLatency} ms</strong></div>
       </div>
     </div>
   )

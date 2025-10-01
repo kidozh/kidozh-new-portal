@@ -10,6 +10,11 @@ export default function ConnectivityMap({ data = [], width = 800, height = 320, 
   const [imageHref, setImageHref] = React.useState(null)
   const clipIdRef = React.useRef(`land-clip-${Math.random().toString(36).slice(2,9)}`)
   const maxTotal = Math.max(0.00001, ...data.map((d) => d.total || 0))
+  // responsive sizing: if parent container changes size, measure it
+  const containerRef = React.useRef(null)
+  const [measuredWidth, setMeasuredWidth] = React.useState(null)
+  const defaultWidth = width || 800
+  const defaultHeight = height || 320
 
   React.useEffect(() => {
     let cancelled = false
@@ -73,18 +78,21 @@ export default function ConnectivityMap({ data = [], width = 800, height = 320, 
   React.useEffect(() => {
     if (!landGeo) return
     try {
+      // determine effective drawing size (use measuredWidth when available)
+      const effWidth = measuredWidth || width || defaultWidth
+      const effHeight = height || Math.round((defaultHeight / defaultWidth) * effWidth)
       // let d3 compute appropriate scale and translate for us
       if (typeof projection.fitSize === 'function') {
         // small padding
-        projection.fitSize([Math.max(20, width - 20), Math.max(20, height - 20)], landGeo)
+        projection.fitSize([Math.max(20, effWidth - 20), Math.max(20, effHeight - 20)], landGeo)
       } else {
         // fallback to manual bounds-based fit
         const bounds = pathGenerator.bounds(landGeo)
         const dx = bounds[1][0] - bounds[0][0]
         const dy = bounds[1][1] - bounds[0][1]
         if (dx > 0 && dy > 0) {
-          const scale = Math.min((width - 20) / dx, (height - 20) / dy)
-          const translate = [(width - scale * (bounds[1][0] + bounds[0][0])) / 2, (height - scale * (bounds[1][1] + bounds[0][1])) / 2]
+          const scale = Math.min((effWidth - 20) / dx, (effHeight - 20) / dy)
+          const translate = [(effWidth - scale * (bounds[1][0] + bounds[0][0])) / 2, (effHeight - scale * (bounds[1][1] + bounds[0][1])) / 2]
           projection.scale(scale).translate(translate)
         }
       }
@@ -95,14 +103,17 @@ export default function ConnectivityMap({ data = [], width = 800, height = 320, 
 
   // create a simple IDW-based heatmap on a canvas and export to data URL, clipped to land later
   React.useEffect(() => {
-    if (!landGeo) return
+  if (!landGeo) return
     if (typeof window === 'undefined') return
     if (!projection || typeof projection.invert !== 'function') return
 
     // create a temporary canvas
-    const cvs = document.createElement('canvas')
-    cvs.width = Math.max(1, Math.round(width))
-    cvs.height = Math.max(1, Math.round(height))
+  // effective canvas size follows measured container width if available
+  const effWidth = measuredWidth || width || defaultWidth
+  const effHeight = height || Math.round((defaultHeight / defaultWidth) * effWidth)
+  const cvs = document.createElement('canvas')
+  cvs.width = Math.max(1, Math.round(effWidth))
+  cvs.height = Math.max(1, Math.round(effHeight))
     const ctx = cvs.getContext('2d')
 
     // parameters
@@ -158,7 +169,7 @@ export default function ConnectivityMap({ data = [], width = 800, height = 320, 
     }
 
     try {
-      const url = cvs.toDataURL('image/png')
+  const url = cvs.toDataURL('image/png')
       try {
         console.log('ConnectivityMap: generated heatmap data URL length=', url.length)
         try { window.__connectivity_heatmap_length = url.length } catch (e) {}
@@ -174,10 +185,43 @@ export default function ConnectivityMap({ data = [], width = 800, height = 320, 
     }
 
     // no cleanup needed
-  }, [landGeo, data, projection, width, height, maxTotal])
+  }, [landGeo, data, projection, width, height, maxTotal, measuredWidth])
+
+  // ResizeObserver to measure parent container width for responsive rendering
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return
+    const node = containerRef.current
+    if (!node) return
+    let ro = null
+    try {
+      ro = new ResizeObserver((entries) => {
+        for (const e of entries) {
+          const w = Math.max(1, Math.floor(e.contentRect.width))
+          setMeasuredWidth((prev) => (prev !== w ? w : prev))
+        }
+      })
+      ro.observe(node)
+    } catch (e) {
+      // ResizeObserver may not be available in some environments; fall back to window resize
+      const onResize = () => {
+        const w = node.clientWidth || defaultWidth
+        setMeasuredWidth((prev) => (prev !== w ? w : prev))
+      }
+      window.addEventListener('resize', onResize)
+      onResize()
+      return () => window.removeEventListener('resize', onResize)
+    }
+    // initialize measured width
+    setMeasuredWidth(node.clientWidth || defaultWidth)
+    return () => { try { ro && ro.disconnect() } catch(e) {} }
+  }, [containerRef.current])
+
+  // effective sizes for rendering and SVG viewBox
+  const effWidth = measuredWidth || width || defaultWidth
+  const effHeight = height || Math.round((defaultHeight / defaultWidth) * effWidth)
 
   return (
-    <div className="w-full overflow-hidden rounded relative">
+    <div ref={containerRef} className="w-full overflow-hidden rounded relative">
       {/* Visible loading/error overlay */}
       {(!landGeo && !loadError) && (
         <div className="map-loading-overlay absolute inset-0 flex items-center justify-center bg-white/60 dark:bg-black/40 z-10" aria-live="polite">
@@ -190,14 +234,14 @@ export default function ConnectivityMap({ data = [], width = 800, height = 320, 
         </div>
       )}
 
-      <svg viewBox={`0 0 ${width} ${height}`} width="100%" height={height} xmlns="http://www.w3.org/2000/svg" className="relative z-20">
+      <svg viewBox={`0 0 ${effWidth} ${effHeight}`} width="100%" height={effHeight} xmlns="http://www.w3.org/2000/svg" className="relative z-20">
         <defs>
           {landGeo && <clipPath id={clipIdRef.current}><path d={pathGenerator(landGeo)} /></clipPath>}
         </defs>
-        <rect x={0} y={0} width={width} height={height} fill="transparent" />
+        <rect x={0} y={0} width={effWidth} height={effHeight} fill="transparent" />
 
         {imageHref && landGeo && (
-            <image href={imageHref} xlinkHref={imageHref} x={0} y={0} width={width} height={height} preserveAspectRatio="none" clipPath={`url(#${clipIdRef.current})`} style={{ pointerEvents: 'none' }} />
+            <image href={imageHref} xlinkHref={imageHref} x={0} y={0} width={effWidth} height={effHeight} preserveAspectRatio="none" clipPath={`url(#${clipIdRef.current})`} style={{ pointerEvents: 'none' }} />
         )}
 
         {/* land basemap: only draw land polygons (no country borders) */}
