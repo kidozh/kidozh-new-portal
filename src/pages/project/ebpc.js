@@ -389,7 +389,7 @@ const TppPage = () => {
           {t('project.ebpc.contactPromptSuffix')} {t('project.ebpc.exceptPeople')} 
         </p>
 
-        <ul className="list-disc list-inside text-lg font-normal text-gray-700 dark:text-gray-200 mt-4 bg-gray-700 dark:bg-gray-200 hover:bg-gray-400 dark:hover:bg-gray-600 p-4 rounded-lg">
+        <ul className="list-disc list-inside text-lg font-normal text-gray-700 dark:text-gray-200 mt-4 bg-gray-700 dark:bg-gray-200 p-4 rounded-lg">
           <li>Garima Nain</li>
           <li>Kiran Kumar Kumar Pattanaik</li>
           <li>Girish Kumar Sharma</li>
