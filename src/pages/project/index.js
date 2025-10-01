@@ -14,8 +14,16 @@ import CloudImage from "../../images/project/cloud-computing.jpg"
 
 const ProjectCardDark = ({ title, description, link, keywords, image }) => {
     const { t } = useTranslation();
+    const prefetchPage = (p) => {
+        try {
+            const path = p && p.startsWith('/') ? p : `/${p}`
+            const url = `/page-data${path}/page-data.json`
+            // fire-and-forget fetch to warm Gatsby page-data cache
+            fetch(url, { credentials: 'same-origin', mode: 'cors' }).catch(() => {})
+        } catch (e) {}
+    }
     return (
-        <Link to={link} className="bg-white dark:bg-gray-800 shadow-lg rounded-xl overflow-hidden
+        <Link to={link} onMouseEnter={() => prefetchPage(link)} onFocus={() => prefetchPage(link)} className="bg-white dark:bg-gray-800 shadow-lg rounded-xl overflow-hidden
      group hover:transition-all duration-500 ease-in-out hover:scale-105"
             style={{
                 background: `linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2) ), url(${image})`,
@@ -47,8 +55,15 @@ const ProjectCardDark = ({ title, description, link, keywords, image }) => {
 
 const ProjectCard = ({ title, description, link, keywords }) => {
     const { t } = useTranslation();
+    const prefetchPage = (p) => {
+        try {
+            const path = p && p.startsWith('/') ? p : `/${p}`
+            const url = `/page-data${path}/page-data.json`
+            fetch(url, { credentials: 'same-origin', mode: 'cors' }).catch(() => {})
+        } catch (e) {}
+    }
     return (
-        <Link to={link} className="bg-white dark:bg-gray-800 shadow-lg rounded-xl overflow-hidden
+        <Link to={link} onMouseEnter={() => prefetchPage(link)} onFocus={() => prefetchPage(link)} className="bg-white dark:bg-gray-800 shadow-lg rounded-xl overflow-hidden
         dark:hover:bg-linear-to-r dark:hover:from-cyan-500 dark:hover:to-blue-500
         hover:bg-linear-to-r hover:from-orange-200 hover:to-red-200
         hover:scale-105

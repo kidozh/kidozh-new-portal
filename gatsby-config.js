@@ -52,6 +52,12 @@ module.exports = {
         localeJsonSourceName: `locales`, // name given to gatsby-source-filesystem for locales
         // you can enable automatic redirection based on browser language
         redirect: true,
+        // react-i18next options: disable Suspense to avoid navigation being blocked
+        i18nextOptions: {
+          react: {
+            useSuspense: false
+          }
+        }
       },
     },
     {

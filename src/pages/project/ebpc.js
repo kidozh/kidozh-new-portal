@@ -163,7 +163,7 @@ const TppPage = () => {
 
     </section>
 
-    <section className="bg-gray-100 dark:bg-slate-700">
+    <section className="bg-gray-100 dark:bg-slate-700 pb-8">
       <div className="w-full mx-auto max-w-6xl max-w-(--breakpoint-l) px-6 py-8">
         <h1 className="text-2xl font-montserrat font-bold text-gray-800 dark:text-white max-w-none">
           {t('project.ebpc.highlightsHeading')}

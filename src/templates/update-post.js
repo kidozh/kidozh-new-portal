@@ -13,8 +13,8 @@ const UpdatePostPage = ({data}) => {
         <Layout>
 
             <div className="bg-indigo-200 dark:bg-indigo-400 p-8 bg-fine-wave-bg-light dark:bg-fine-wave-bg-dark ">
-                <div className="bg-gray-50 dark:bg-slate-800 rounded-xl max-w-(--breakpoint-xl) mx-auto group hover:transition-all duration-500 ease-in-out hover:scale-101">
-                    <section className="mx-auto px-12 pt-32">
+                <div className="bg-gray-50 dark:bg-slate-800 rounded-xl max-w-(--breakpoint-md) mx-auto group hover:transition-all duration-500 ease-in-out hover:scale-101">
+                    <section className="mx-auto  px-12 pt-32">
                         <h4 className="text-md font-bold font-montserrat text-gray-500 dark:text-gray-400 ">
                             {post.frontmatter.date}
                         </h4>
