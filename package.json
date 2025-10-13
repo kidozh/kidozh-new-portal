@@ -15,6 +15,7 @@
     "flowbite-react": "^0.12.9",
     "fourier-transform": "^1.1.2",
     "gatsby": "^5.14.0",
+    "gatsby-plugin-google-gtag": "^5.15.0",
     "gatsby-plugin-manifest": "^5.14.0",
     "gatsby-plugin-react-i18next": "^3.0.1",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
