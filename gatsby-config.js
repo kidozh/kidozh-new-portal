@@ -117,7 +117,7 @@ module.exports = {
         // This config will be shared across all trackingIds
         gtagConfig: {
           optimize_id: "GT-W62H2GKR",
-          anonymize_ip: true,
+          anonymize_ip: false,
           cookie_expires: 0,
         },
         // This object is used for configuration specific to this plugin

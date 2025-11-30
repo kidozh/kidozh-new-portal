@@ -1,6 +1,6 @@
 {
   "updatePost": {
-    "backToUpdates": "← 返回 更新",
+    "backToUpdates": "← 返回 动态",
     "dateLabel": "日期",
     "titleLabel": "标题"
   }
@@ -9,7 +9,7 @@
     "home": "主页",
     "cv": "简历",
     "projects": "项目",
-    "updates": "更新",
+    "updates": "动态",
     "contact": "联系",
     "openMenu": "打开主菜单"
   },
@@ -24,10 +24,10 @@
     "googleScholar_link": "https://scholar.google.com/citations?user=nudc3xUAAAAJ&hl=en",
     "latest": "最近",
     "newest": "最新",
-    "update": "更新"
+    "update": "动态"
   },
   "update": {
-    "title": "更新"
+    "title": "动态"
   },
   "resume": {
     "name": "张纪铎",
