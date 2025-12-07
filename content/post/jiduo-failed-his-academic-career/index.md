@@ -9,8 +9,10 @@ After completing my PhD viva recently, I also received the news that I was not s
 
 Of course, it’s disappointing — after years of research, preparation, and hope, it’s never easy to hear “not this time.” But setbacks are also part of the academic journey. They remind us that progress isn’t always linear, and that resilience matters just as much as achievement.
 
-Due to changes in my career direction, I will no longer be maintaining this site. In many ways, it now stands as a marker of the chapter I once pursued — a place that will remain as the tomb of my academic journey.
+Owing to a shift in my career trajectory, I will no longer continue to maintain this site.
+It will remain here as it is now — a still and silent archive, the tombstone of my academic life.
 
-While this path has reached its end, I am grateful for everyone who has supported me, collaborated with me, and shared in the challenges and discoveries along the way. The experiences, people, and lessons I gained from academia will stay with me as I move forward into the next stage of my career.
+My journey in academia has reached its terminus. The work preserved here reflects a chapter that has closed with finality, shaped by years of effort, aspiration, and inevitable disappointment. Though the fellowship was not awarded and the path forward no longer lies within the academy, I remain grateful for the guidance, collaboration, and intellectual company I encountered along the way.
 
-Thank you for being part of this chapter. Onward to the next.
+To all who walked beside me during this chapter: thank you.
+I turn now toward a different horizon, carrying what I have learned, but no longer looking back.

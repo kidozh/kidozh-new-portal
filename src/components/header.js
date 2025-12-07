@@ -61,12 +61,12 @@ const Header = ({ siteTitle }) => {
 
   return (
   <header>
-    <div className="bg-blue-600 dark:bg-gray-800">
+    {/* <div className="bg-blue-600 dark:bg-gray-800">
       <div className="max-w-(--breakpoint-xl) mx-auto p-6">
         <h1 className="text-white text-center text-3xl font-bold">This site is no longer active.</h1>
         <p className="text-white text-center">Since I am no longer in academic research, it may not receive updates or support. <Link to="/update/jiduo-failed-his-academic-career/" className="underline">Details for more information.</Link></p>
       </div>
-    </div>
+    </div> */}
 
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className="max-w-(--breakpoint-xl) flex flex-wrap items-center justify-between mx-auto p-4">
