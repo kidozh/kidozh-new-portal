@@ -124,45 +124,52 @@ const ProjectPage = () => {
                             {t("project.phdTitlePrefix")} <span className="bg-purple-200 dark:bg-purple-600 font-montserrat">{t("project.phdUniversity")}</span></h1>
                         <p className="text-normal font-bold text-gray-500 dark:text-gray-200 mt-4 font-normal">{t("project.phdSupervisor")}</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+                            <ProjectCard
+                                title={t("project.cards.minimalDesign.title")}
+                                description={t("project.cards.minimalDesign.description")}
+                                link="/project/minimal-deep-learning-design/"
+                                keywords={t("project.cards.minimalDesign.keywords")}
+                            />
+
                             <ProjectCardDark
-                                title="Expoential Backoff Producer-Consumer Framework"
-                                description="An online cloud computing framework for real-time tool condition monitoring"
+                                title={t("project.cards.ebpc.title")}
+                                description={t("project.cards.ebpc.description")}
                                 link="/project/ebpc"
-                                keywords="Deep Learning, Cloud Computing, Real-time"
+                                keywords={t("project.cards.ebpc.keywords")}
                                 image={CloudImage}
                             />
 
                             <ProjectCardDark
-                                title="Minimum sufficient signal condition in representing events"
-                                description="The most basic unit of signal structure to represent events in machining process."
+                                title={t("project.cards.msu.title")}
+                                description={t("project.cards.msu.description")}
                                 link="/project/manchester-unit"
-                                keywords="Deep Learning, Machine Signal"
+                                keywords={t("project.cards.msu.keywords")}
                                 image={DnaSignalForm}
                             />
 
                             <ProjectCard
-                                title="SVM in process incidence identification"
-                                description="Accurate and intepretable process incidence identification using support vector machine."
+                                title={t("project.cards.svm.title")}
+                                description={t("project.cards.svm.description")}
                                 link="#"
-                                keywords="Machine learning, Feature analysis, Process monitoring"
+                                keywords={t("project.cards.svm.keywords")}
 
                             />
 
 
                             <ProjectCardDark
-                                title="TPP in process incidence identification"
-                                description="Remove size limit of preceiving signals to achieve real-time process incidence identification."
+                                title={t("project.cards.tpp.title")}
+                                description={t("project.cards.tpp.description")}
                                 link="/project/tpp"
-                                keywords="Deep learning, Tool wear, Process monitoring"
+                                keywords={t("project.cards.tpp.keywords")}
                                 image={GalaxyImage}
 
                             />
 
                             <ProjectCard
-                                title="Multi-objective prediction in drilling hybrid stacks"
-                                description="Achieve multi-objectives prediction in one unified model."
+                                title={t("project.cards.hybrid.title")}
+                                description={t("project.cards.hybrid.description")}
                                 link="/project/hybrid-prediction"
-                                keywords="Deep learning, Tool wear, Process monitoring"
+                                keywords={t("project.cards.hybrid.keywords")}
 
                             />
 
@@ -189,39 +196,39 @@ const ProjectPage = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                             <ProjectCardDark
-                                title="LSTM based tool wear forecast"
-                                description="Predict the future tendency of tool wear evolution in an online way."
+                                title={t("project.cards.lstmWear.title")}
+                                description={t("project.cards.lstmWear.description")}
                                 link="https://www.sciencedirect.com/science/article/abs/pii/S0736584519303655"
-                                keywords="Deep learning, Tool wear forecast, Long-short term memory"
+                                keywords={t("project.cards.lstmWear.keywords")}
                                 image={Robonauts}
                             />
 
                             <ProjectCardDark
-                                title="Tool wear monitoring in multiple condition"
-                                description="A fast and accurate CNN model to monitor tool wear during machining process."
+                                title={t("project.cards.multiCond.title")}
+                                description={t("project.cards.multiCond.description")}
                                 link="https://arch-blog.kidozh.com/projects/keras_detect_tool_wear/"
-                                keywords="Deep Learning, Machine Tool, Tool wear monitoring, Convolutional Neural Network"
+                                keywords={t("project.cards.multiCond.keywords")}
                                 image={Drill}
                             />
                             <ProjectCardDark
-                                title="The transfer learning in tool wear monitoring"
-                                description="One model to predict tool wear in multiple machining condition and its easy transferring to new condition."
+                                title={t("project.cards.transfer.title")}
+                                description={t("project.cards.transfer.description")}
                                 link="https://arch-blog.kidozh.com/projects/transfer_learning_NASA/"
-                                keywords="Deep Learning, Machine Tool, Tool wear monitoring, Transfer Learning"
+                                keywords={t("project.cards.transfer.keywords")}
                                 image={Spark}
                             />
                             <ProjectCardDark
-                                title="DBSCAN based TDA Visualization"
-                                description="Easy, intuitive and accurate way to demonstrate Mechanism of convolutional kernel in processing 1D signal."
+                                title={t("project.cards.tda.title")}
+                                description={t("project.cards.tda.description")}
                                 link="https://arch-blog.kidozh.com/projects/keras_detect_tool_wear/visualization.html"
-                                keywords="Deep Learning, Keras, Topology Data Analysis, Visualization"
+                                keywords={t("project.cards.tda.keywords")}
                                 image={PluseTrace}
                             />
                             <ProjectCardDark
-                                title="Deep CGAN based tool wear digital twin"
-                                description="Simulate real and random signal accordance to tool wear by deep conditional convolutional generative adversarial network"
+                                title={t("project.cards.cgan.title")}
+                                description={t("project.cards.cgan.description")}
                                 link="https://arch-blog.kidozh.com/projects/digital_twins_by_GAN/"
-                                keywords="Deep Learning, Keras, Machine Tool, Digital Twin, Deep Convolutional Generative Adversarial Neural Network"
+                                keywords={t("project.cards.cgan.keywords")}
                                 image={Window}
                             />
 
@@ -233,10 +240,10 @@ const ProjectPage = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                             <ProjectCard
-                                title="Discuz Hub"
-                                description="Lightweight Discuz! forum client for Android."
+                                title={t("project.cards.discuz.title")}
+                                description={t("project.cards.discuz.description")}
                                 link="https://discuzhub.kidozh.com"
-                                keywords="MIT License, Since 2018"
+                                keywords={t("project.cards.discuz.keywords")}
                             />
 
                             <ProjectCard
